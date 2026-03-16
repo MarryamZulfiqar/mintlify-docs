@@ -37,12 +37,6 @@ There are multiple ways to add Core Testnet/Mainnet configurations to your MetaM
 
 Once you've set up your MetaMask wallet, you can use it to connect to Core blockchain by adding Core network details in MetaMask's network settings. Navigate to `Settings->Networks` in MetaMask and click the `Add Network` button. Input the following information:
 
-<Tabs defaultValue="testnet2" values={[
-{label: 'Testnet', value: 'testnet2'},
-{label: 'Mainnet', value: 'mainnet'},
-]}>
-
-<TabItem value="testnet2">
 
 - **Network Name:** Core Blockchain TestNet
 - **New [RPC](/docs/07-reference/glossary#r) URL:** https://rpc.test2.btcs.network
@@ -57,9 +51,6 @@ Once you've set up your MetaMask wallet, you can use it to connect to Core block
 ![add-network-metamask](../../static/img/testnet-wallet-config/testnet-config-wallet-1.png)
 </p>
 
-</TabItem>
-
-<TabItem value="mainnet">
 
 - **Network Name:** Core Blockchain Mainnet
 - **New RPC URL:** https://rpc.ankr.com/core
@@ -68,18 +59,10 @@ Once you've set up your MetaMask wallet, you can use it to connect to Core block
 - **Block Explorer URL:** https://scan.coredao.org
 - **Staking Website:** https://stake.coredao.org/
 
-</TabItem>
-
-</Tabs>
 
 ### Adding the Core network via Chainlist.org
 
-<Tabs defaultValue="testnet2" values={[
-{label: 'Testnet', value: 'testnet2'},
-{label: 'Mainnet', value: 'mainnet'},
-]}>
 
-<TabItem value="testnet2">
 1. Go to chainlist.org and search for _Core Blockchain_, make sure to check the _Include Testnets_ option.
 
 2. Double check to make sure to choose the right network. Please check the details in the above snapshots — Chain ID, Currency etc. to ensure you will add the correct one.
@@ -98,10 +81,8 @@ Once you've set up your MetaMask wallet, you can use it to connect to Core block
 
 The Core Testnet is now added to your MetaMask.
 
-</TabItem>
 
 
-<TabItem value="mainnet">
 
 1. Go to chainlist.org and search for ‘_Core Blockchain_’.
 
@@ -121,18 +102,10 @@ The Core Testnet is now added to your MetaMask.
 
 The Core Mainnet is now added to your MetaMask.
 
-</TabItem>
-
-</Tabs>
 
 ### Adding the Core network via the Core Explorer
 
-<Tabs defaultValue="testnet2" values={[
-{label: 'Testnet', value: 'testnet2'},
-{label: 'Mainnet', value: 'mainnet'},
-]}>
 
-<TabItem value="testnet2">
 1. Go to https://scan.test2.btcs.network/ and scroll all the way down on the page
 
 <p align="center" style={{zoom:"60%"}}>
@@ -145,10 +118,6 @@ The Core Mainnet is now added to your MetaMask.
 
 4. After performing the above steps, you will be able to see Core network the next time you access the network selector.
 
-</TabItem>
-
-
-<TabItem value="mainnet">
 
 1. Go to https://scan.coredao.org/ and scroll all the way down on the page
 
@@ -162,9 +131,6 @@ The Core Mainnet is now added to your MetaMask.
 
 4. After performing the above steps, you will be able to see Core network the next time you access the network selector.
 
-</TabItem>
-   
-</Tabs>
 
 :::info
 

@@ -11,20 +11,27 @@
   "navigation": {
     "groups": [
       {
+        "group":"Build On Core",
+        "pages":
+        [
+          "docs/developer/network/core-wallet-config"
+        ]
+      },
+      {
         "group": "Staking / Delegating",
         "pages": [
-          "docs/stake-and-delegate/overview",
+          "docs/02-staking/overview",
           {
             "group": "Self-Custodial BTC Staking",
             "pages": [
-              "docs/stake-and-delegate/btc-staking/btc-staking-working",
-              "docs/stake-and-delegate/btc-staking/design",
+              "docs/02-staking/btc-staking/btc-staking-working",
+              "docs/02-staking/btc-staking/design",
               {
                 "group": "How To Guides",
                 "pages": [
-                  "docs/stake-and-delegate/btc-staking/stake-btc-guide",
-                  "docs/stake-and-delegate/btc-staking-txn-decoder",
-                  "docs/stake-and-delegate/btc-staking/Redeeming-Guide"
+                  "docs/02-staking/btc-staking/stake-btc-guide",
+                  "docs/02-staking/btc-staking-txn-decoder",
+                  "docs/02-staking/btc-staking/Redeeming-Guide"
                 ]
               },
               {
@@ -41,19 +48,19 @@
             "group": "Staking CORE Tokens",
             "pages": [
               "docs/core-staking",
-              "docs/stake-and-delegate/CORE-staking",
-              "docs/stake-and-delegate/Ledger-CORE-staking"
+              "docs/CORE-staking",
+              "docs/Ledger-CORE-staking"
             ]
           },
           {
             "group": "Dual Staking",
             "pages": [
-              "docs/stake-and-delegate/dual-staking-working",
-              "docs/stake-and-delegate/dual-staking-guide",
-              "docs/stake-and-delegate/dual-staking-integration-guide"
+              "docs/dual-staking-working",
+              "docs/dual-staking-guide",
+              "docs/dual-staking-integration-guide"
             ]
           },
-          "docs/stake-and-delegate/delegating-hash"
+          "docs/delegating-hash"
         ]
       }
     ]
