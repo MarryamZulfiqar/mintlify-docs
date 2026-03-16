@@ -14,7 +14,7 @@
         "group":"Build On Core",
         "pages":
         [
-          "docs/developer/network/core-wallet-config"
+          "docs/03-developer/network/core-wallet-config"
         ]
       },
       {
@@ -85,6 +85,6 @@
       "devin-mcp"
     ]
   },
-  
+
   "logo": "\\images\\img\\core.png"
 }
