@@ -1,122 +1,62 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "mint",
-  "name": "Mint Starter Kit",
+  "theme": "aspen",
+  "name": "Core DAO Official Documentation",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#0D9373",
+    "light": "#55D799",
+    "dark": "#0D9373"
   },
   "favicon": "/favicon.svg",
   "navigation": {
-    "tabs": [
+    "groups": [
       {
-        "tab": "Guides",
-        "groups": [
+        "group": "Staking / Delegating",
+        "pages": [
+          "docs/stake-and-delegate/overview",
           {
-            "group": "Getting started",
+            "group": "Self-Custodial BTC Staking",
             "pages": [
-              "index",
-              "quickstart",
-              "development"
+              "docs/stake-and-delegate/btc-staking/btc-staking-working",
+              "docs/stake-and-delegate/btc-staking/design",
+              {
+                "group": "How To Guides",
+                "pages": [
+                  "docs/stake-and-delegate/btc-staking/stake-btc-guide",
+                  "docs/stake-and-delegate/btc-staking-txn-decoder",
+                  "docs/stake-and-delegate/btc-staking/Redeeming-Guide"
+                ]
+              },
+              {
+                "group": "Using Ledger Hardware Wallets",
+                "pages": [
+                  "docs/ledger-on-core",
+                  "docs/ledger-on-core-mainnet",
+                  "docs/ledger-on-core-testnet"
+                ]
+              }
             ]
           },
           {
-            "group": "Customization",
+            "group": "Staking CORE Tokens",
             "pages": [
-              "essentials/settings",
-              "essentials/navigation"
+              "docs/core-staking",
+              "docs/stake-and-delegate/CORE-staking",
+              "docs/stake-and-delegate/Ledger-CORE-staking"
             ]
           },
           {
-            "group": "Writing content",
+            "group": "Dual Staking",
             "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/reusable-snippets"
+              "docs/stake-and-delegate/dual-staking-working",
+              "docs/stake-and-delegate/dual-staking-guide",
+              "docs/stake-and-delegate/dual-staking-integration-guide"
             ]
           },
-          {
-            "group": "AI tools",
-            "pages": [
-              "ai-tools/cursor",
-              "ai-tools/claude-code",
-              "ai-tools/windsurf"
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "API reference",
-        "groups": [
-          {
-            "group": "API documentation",
-            "pages": [
-              "api-reference/introduction"
-            ]
-          },
-          {
-            "group": "Endpoint examples",
-            "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete",
-              "api-reference/endpoint/webhook"
-            ]
-          }
+          "docs/stake-and-delegate/delegating-hash"
         ]
       }
-    ],
-    "global": {
-      "anchors": [
-        {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
-        },
-        {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
-        }
-      ]
-    }
+    ]
   },
-  "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
-  },
-  "navbar": {
-    "links": [
-      {
-        "label": "Support",
-        "href": "mailto:hi@mintlify.com"
-      }
-    ],
-    "primary": {
-      "type": "button",
-      "label": "Dashboard",
-      "href": "https://dashboard.mintlify.com"
-    }
-  },
-  "contextual": {
-    "options": [
-     "copy",
-     "view",
-     "chatgpt",
-     "claude",
-     "perplexity",
-     "mcp",
-     "cursor",
-     "vscode"
-   ]
-  },
-  "footer": {
-    "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
-    }
-  }
+  "logo": "\\images\\img\\core.png"
 }
