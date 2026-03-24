@@ -1,6 +1,6 @@
 ---
 title: "Zcash Satoshi Plus (ZSP)"
-sidebar title: "Zcash Satoshi Plus (ZSP)"
+sidebarTitle: "Zcash Satoshi Plus (ZSP)"
 description: Z is secured by three groups — ZEC miners, ZEC holders, and Z token stakers — who elect validators through a hybrid scoring system. How each leg works, how validators are elected, and what ZSP creates for ZEC.
 keywords: [ZSP, Zcash Satoshi Plus, consensus, validator election, DPoW, self-custodial staking, DPoS, ZEC miners, CLTV, timelock, hybrid score, Equihash precompile, Blake2b precompile, Zcash Light Client, ZcashStake, slashing]
 ai_summary: >-
