@@ -63,6 +63,7 @@
       },
       {
         "group": "For Developers",
+        "icon": "laptop-code",
         "pages": [
           "docs/for-developers/quick-start",
           "docs/for-developers/evm-compatibility",
