@@ -1,5 +1,6 @@
 ---
 title: "Start Here"
+sidebarTitle: "Get Started"
 ---
 
 # Start Here
