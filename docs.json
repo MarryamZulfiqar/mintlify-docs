@@ -1,44 +1,83 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "aspen",
-  "name": "Core DAO Official Documentation",
+  "theme": "mint",
+  "name": "Z Protocol",
   "colors": {
-    "primary": "#0D9373",
-    "light": "#55D799",
-    "dark": "#0D9373"
+    "primary": "#1A1A2E",
+    "light": "#6B7FFF",
+    "dark": "#4A5FFF"
+  },
+  "logo": {
+    "light": "/logo/light.svg",
+    "dark": "/logo/dark.svg"
   },
   "favicon": "/favicon.svg",
-  "navigation": {
-    "groups": []
+  "topbarLinks": [
+    {
+      "name": "Website",
+      "url": "https://zprotocol.xyz"
+    }
+  ],
+  "topbarCtaButton": {
+    "name": "Launch App",
+    "url": "https://app.zprotocol.xyz"
   },
-
-  "contextual": {
-    "options": [
-      "copy",
-      "view",
-      "assistant",
-      "chatgpt",
-      "claude",
-      "perplexity",
-      "grok",
-      "aistudio",
-      "devin",
-      "windsurf",
-      "mcp",
-      "cursor",
-      "vscode",
-      "devin-mcp"
-    ]
-  },
-
-  "logo": "\\images\\img\\core.png",
-  "styling": {
-    "eyebrows": "breadcrumbs"
-  },
-  "icons": {
-    "library": "fontawesome"
-  },
-  "thumbnails": {
-    "appearance": "dark"
+  "anchors": [
+    {
+      "name": "GitHub",
+      "icon": "github",
+      "url": "https://github.com/z-protocol"
+    },
+    {
+      "name": "Discord",
+      "icon": "discord",
+      "url": "https://discord.gg/zprotocol"
+    }
+  ],
+  "navigation": [
+    {
+      "group": "Getting Started",
+      "pages": ["overview"]
+    },
+    {
+      "group": "Core Concepts",
+      "pages": [
+        "designed-for-agents",
+        "privacy-architecture",
+        "consensus-zsp"
+      ]
+    },
+    {
+      "group": "Staking",
+      "pages": [
+        "dual-staking",
+        "liquid-staking"
+      ]
+    },
+    {
+      "group": "Zcosystem",
+      "pages": [
+        "zcosystem",
+        "usdz-and-yusdz",
+        "bridges"
+      ]
+    },
+    {
+      "group": "Protocol",
+      "pages": [
+        "z-token",
+        "compliance",
+        "roadmap"
+      ]
+    },
+    {
+      "group": "Reference",
+      "pages": ["glossary"]
+    }
+  ],
+  "footerSocials": {
+    "x": "https://x.com/zprotocol",
+    "github": "https://github.com/z-protocol",
+    "discord": "https://discord.gg/zprotocol"
   }
 }
