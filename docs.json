@@ -9,62 +9,14 @@
   },
   "favicon": "/favicon.svg",
   "navigation": {
-    "groups": [
+    "tabs": [
       {
-        "group":"Build On Core",
-        "pages":
-        [
-          "docs/03-developer/network/core-wallet-config"
-        ]
-      },
-      {
-        "group": "Staking / Delegating",
+        "tab": "Getting Started",
         "pages": [
-          "docs/02-staking/overview",
-          {
-            "group": "Self-Custodial BTC Staking",
-            "pages": [
-              "docs/02-staking/btc-staking/btc-staking-working",
-              "docs/02-staking/btc-staking/design",
-              {
-                "group": "How To Guides",
-                "pages": [
-                  "docs/02-staking/btc-staking/stake-btc-guide",
-                  "docs/02-staking/btc-staking-txn-decoder",
-                  "docs/02-staking/btc-staking/Redeeming-Guide"
-                ]
-              },
-              {
-                "group": "Using Ledger Hardware Wallets",
-                "pages": [
-                  "docs/ledger-on-core",
-                  "docs/ledger-on-core-mainnet",
-                  "docs/ledger-on-core-testnet"
-                ]
-              }
-            ]
-          },
-          {
-            "group": "Staking CORE Tokens",
-            "pages": [
-              "docs/core-staking",
-              "docs/CORE-staking",
-              "docs/Ledger-CORE-staking"
-            ]
-          },
-          {
-            "group": "Dual Staking",
-            "pages": [
-              "docs/dual-staking-working",
-              "docs/dual-staking-guide",
-              "docs/dual-staking-integration-guide"
-            ]
-          },
-          "docs/delegating-hash"
+          "docs/01-overview"
         ]
       }
     ]
-    
   },
 
   "contextual": {
