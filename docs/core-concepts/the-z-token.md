@@ -2,7 +2,8 @@
 title: The Z Token
 description: The Z token is the governance and value-capture token for Z Protocol. Gas, staking, governance, and value accrual from Zcosystem activity.
 keywords: [Z token, governance, gas, staking, value accrual, consensus, Dual Staking, ZSP, fixed supply, Paymaster]
-ai_summary: Z token has fixed supply of 1 billion. Four utilities: (1) Gas — primary gas token of Z; ZEC accepted via ERC-4337 Paymaster, conversion transparent. (2) Staking/Consensus — Z token stakers are Leg 3 of ZSP, receive 2/3 of total consensus emissions. Dual Staking (Z + self-custodial ZEC simultaneously) earns boosted rewards. (3) Governance — parameter changes, validator policy, emission schedule. (4) Value accrual — revenue from Zcosystem applications accrues to Z holders. Distribution details TBD.
+ai_summary: >-
+  Z token has fixed supply of 1 billion. Four utilities: (1) Gas — primary gas token of Z; ZEC accepted via ERC-4337 Paymaster, conversion transparent. (2) Staking/Consensus — Z token stakers are Leg 3 of ZSP, receive 2/3 of total consensus emissions. Dual Staking (Z + self-custodial ZEC simultaneously) earns boosted rewards. (3) Governance — parameter changes, validator policy, emission schedule. (4) Value accrual — revenue from Zcosystem applications accrues to Z holders. Distribution details TBD.
 ---
 
 # The Z Token

@@ -8,8 +8,8 @@
     "dark": "#0D9373"
   },
   "favicon": {
-    "light": "/logo/Logo-v2.svg",
-    "dark": "/logo/Logo-v2.svg"
+    "light": "/logo/light.svg",
+    "dark": "/logo/dark.svg"
   },
   "navigation": {
     "groups": [
@@ -114,7 +114,10 @@
   },
 
 
-  "logo": "/logo/Logo-v2-1.svg",
+  "logo": {
+    "light": "/logo/light.svg",
+    "dark": "/logo/dark.svg"
+  },
   "styling": {
     "eyebrows": "breadcrumbs"
   },
