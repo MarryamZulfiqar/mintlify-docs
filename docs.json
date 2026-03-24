@@ -1,23 +1,98 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "aspen",
-  "name": "Core DAO Official Documentation",
+  "theme": "mint",
+  "name": "Protocol Z Official Documentation",
   "colors": {
     "primary": "#0D9373",
     "light": "#55D799",
     "dark": "#0D9373"
   },
-  "favicon": "/favicon.svg",
+  "favicon": {
+    "light": "/logo/Logo-v2.svg",
+    "dark": "/logo/Logo-v2.svg"
+  },
   "navigation": {
     "groups": [
       {
-        "group": "Getting Started",
+        "group": "Introduction",
         "pages": [
-          "docs/01-overview"
+          "docs/introduction/what-is-z",
+          "docs/introduction/why-privacy-now",
+          "docs/introduction/start-here"
+        ]
+      },
+      {
+        "group": "Core Concepts",
+        "pages": [
+          "docs/core-concepts/privacy-architecture",
+          "docs/core-concepts/zcash-satoshi-plus",
+          "docs/core-concepts/the-zcosystem",
+          "docs/core-concepts/the-z-token"
+        ]
+      },
+      {
+        "group": "Products",
+        "pages": [
+          "docs/products/shieldedpool",
+          "docs/products/z-trade",
+          "docs/products/z-lend",
+          "docs/products/z-stake",
+          "docs/products/usdz",
+          "docs/products/yusdz",
+          "docs/products/z-bridge"
+        ]
+      },
+      {
+        "group": "Staking",
+        "pages": [
+          "docs/staking/zec-staking-overview",
+          "docs/staking/self-custodial-staking",
+          "docs/staking/liquid-staking",
+          "docs/staking/dual-staking"
+        ]
+      },
+      {
+        "group": "For Agents",
+        "pages": [
+          "docs/for-agents/z-for-ai-agents",
+          "docs/for-agents/wallet-hygiene",
+          "docs/for-agents/permissions-session-keys",
+          "docs/for-agents/agent-tooling",
+          "docs/for-agents/simulation-preflight"
+        ]
+      },
+      {
+        "group": "For Developers",
+        "pages": [
+          "docs/for-developers/quick-start",
+          "docs/for-developers/evm-compatibility",
+          "docs/for-developers/local-devnet",
+          "docs/for-developers/masp-integration-guide",
+          "docs/for-developers/relayAdapter-pattern",
+          "docs/for-developers/broadcaster-network",
+          "docs/for-developers/skillmd-reference"
+        ]
+      },
+      {
+        "group": "Compliance",
+        "pages": [
+          "docs/compliance/privacy-and-compliance",
+          "docs/compliance/selective-disclosure",
+          "docs/compliance/boundary-enforcement"
+        ]
+      },
+      {
+        "group": "Reference",
+        "pages": [
+          "docs/reference/roadmap",
+          "docs/reference/security-properties",
+          "docs/reference/glossary",
+          "docs/reference/faq"
         ]
       }
     ]
   },
+
 
   "contextual": {
     "options": [
@@ -38,7 +113,8 @@
     ]
   },
 
-  "logo": "\\images\\img\\core.png",
+
+  "logo": "/logo/Logo-v2-1.svg",
   "styling": {
     "eyebrows": "breadcrumbs"
   },
@@ -47,5 +123,17 @@
   },
   "thumbnails": {
     "appearance": "dark"
+  },
+  "background": {
+    "decoration": "grid"
+  },
+  "appearance": {
+    "strict": false,
+    "default": "dark"
   }
 }
+
+
+
+
+
