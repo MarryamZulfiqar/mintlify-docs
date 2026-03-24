@@ -1,14 +1,10 @@
 ---
-title: "01 Overview"
----
-
-```markdown
----
 title: "Z Protocol — Overview"
 slug: overview
 description: "Z is the privacy platform for human and agentic on-chain action. Powered by Zcash, Z delivers a vertically integrated stack of privacy-focused applications for human and agentic use."
 keywords: [Z Protocol, privacy, AI agents, EVM, ZEC, Zcash, ShieldedPool, MASP, Zcosystem, ZSP, stablecoin, stZEC, USDZ, DeFi, on-chain privacy]
-ai_summary: "Z is an EVM-compatible privacy protocol powered by Zcash. Two structural forces drive it: (1) AI reduces the cost of on-chain mass surveillance to near zero; (2) AI agents need private financial rails. Z delivers both a privacy layer and a full DeFi stack through two architectural components: the ShieldedPool (a UTXO-based MASP where balances are shielded by Groth16 ZK proofs) and the Zcosystem (an EVM-based DeFi layer where assets exit to fresh one-time stealth addresses per interaction, then reshield). Consensus is Zcash Satoshi Plus (ZSP): ZEC miners, ZEC holders, and Z token stakers elect validators. Gas is payable in ZEC or Z token. Core products at launch: Z Trade (DEX), Z Lend (lending/borrowing), USDZ (1:1 USDC/USDT stablecoin), yUSDZ (yield-bearing USDZ), stZ (liquid staked Z tokens), LayerZero bridge. Post-launch: stZEC, ZEC SPV bridge, and deeper privacy primitives."
+ai_summary: |
+  Z is an EVM-compatible privacy protocol powered by Zcash. Two structural forces drive it: (1) AI reduces the cost of on-chain mass surveillance to near zero; (2) AI agents need private financial rails. Z delivers both a privacy layer and a full DeFi stack through two architectural components: the ShieldedPool (a UTXO-based MASP where balances are shielded by Groth16 ZK proofs) and the Zcosystem (an EVM-based DeFi layer where assets exit to fresh one-time stealth addresses per interaction, then reshield). Consensus is Zcash Satoshi Plus (ZSP): ZEC miners, ZEC holders, and Z token stakers elect validators. Gas is payable in ZEC or Z token. Core products at launch: Z Trade (DEX), Z Lend (lending/borrowing), USDZ (1:1 USDC/USDT stablecoin), yUSDZ (yield-bearing USDZ), stZ (liquid staked Z tokens), LayerZero bridge. Post-launch: stZEC, ZEC SPV bridge, and deeper privacy primitives.
 ---
 
 # Z Protocol
@@ -152,4 +148,3 @@ The sections that follow go deeper into each part of the architecture:
 | [11 — Compliance](./11-compliance.md) | How privacy and regulatory requirements coexist |
 | [12 — Roadmap](./12-roadmap.md) | What ships at launch and what comes after |
 | [13 — Glossary](./13-glossary.md) | Terms and definitions |
-```
