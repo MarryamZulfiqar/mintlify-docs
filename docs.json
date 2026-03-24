@@ -15,6 +15,9 @@
         "pages": [
           "docs/01-overview"
         ]
+      },
+      {
+        "tab": "Core Concepts "
       }
     ]
   },
