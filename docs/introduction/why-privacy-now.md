@@ -1,5 +1,6 @@
 ---
 title: "Why Privacy Now"
+sidebarTitle: "Why Privacy Now"
 ---
 
 # Why Privacy Now
