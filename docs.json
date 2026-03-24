@@ -9,15 +9,12 @@
   },
   "favicon": "/favicon.svg",
   "navigation": {
-    "tabs": [
+    "groups": [
       {
-        "tab": "Getting Started",
+        "group": "Getting Started",
         "pages": [
           "docs/01-overview"
         ]
-      },
-      {
-        "tab": "Core Concepts "
       }
     ]
   },
