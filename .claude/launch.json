@@ -3,7 +3,7 @@
   "configurations": [
     {
       "name": "mintlify-docs",
-      "runtimeExecutable": "C:\\Program Files\\nodejs\\npx.cmd",
+      "runtimeExecutable": "npx",
       "runtimeArgs": ["mintlify", "dev"],
       "port": 3000
     }

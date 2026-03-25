@@ -1,0 +1,386 @@
+# ============================================================================
+# AI Docs Quality Check — Mintlify Edition
+# ============================================================================
+name: AI Docs Quality Check
+
+on:
+  pull_request:
+    paths:
+      - "docs/**/*.mdx"
+      - "docs/**/*.md"
+      - "docs.json"
+  push:
+    branches:
+      - main
+    paths:
+      - "docs/**/*.mdx"
+      - "docs/**/*.md"
+      - "docs.json"
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  # ── 1. Frontmatter Validation ─────────────────────────────────────────────
+
+  frontmatter-check:
+    name: Validate Mintlify Frontmatter
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check required frontmatter fields
+        run: |
+          # Mintlify required fields (title + description are mandatory;
+          # sidebarTitle and keywords are best-practice)
+          REQUIRED_FIELDS="title description"
+          RECOMMENDED_FIELDS="sidebarTitle keywords"
+          FAILED=0
+
+          while IFS= read -r -d '' file; do
+            # Skip non-content files (e.g. INSTRUCTIONS.md)
+            basename=$(basename "$file")
+            [[ "$basename" == "INSTRUCTIONS.md" ]] && continue
+            [[ "$basename" == "README.md" ]] && continue
+
+            # Extract YAML frontmatter block
+            fm=$(awk '/^---/{if(++c==1){found=1;next} if(c==2){exit}} found{print}' "$file")
+            if [ -z "$fm" ]; then
+              echo "::warning file=$file::No frontmatter found"
+              continue
+            fi
+
+            # Check required fields (fail the job)
+            for field in $REQUIRED_FIELDS; do
+              if ! echo "$fm" | grep -q "^${field}:"; then
+                echo "::error file=$file::Missing required frontmatter field: ${field}"
+                FAILED=1
+              fi
+            done
+
+            # Check recommended fields (warn only)
+            for field in $RECOMMENDED_FIELDS; do
+              if ! echo "$fm" | grep -q "^${field}:"; then
+                echo "::warning file=$file::Missing recommended field: ${field}"
+              fi
+            done
+          done < <(find docs -\( -name "*.mdx" -o -name "*.md" \) -not -path "*/node_modules/*" -print0)
+
+          exit $FAILED
+
+  # ── 2. Mintlify Build Check ───────────────────────────────────────────────
+
+  mintlify-build:
+    name: Mintlify Build & Link Check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install Mintlify CLI
+        run: npm install -g mintlify
+
+      - name: Build & validate docs
+        run: mintlify build
+        # mintlify build will fail on:
+        #   - Broken internal links
+        #   - Pages in docs.json that don't exist
+        #   - Invalid MDX syntax
+        #   - Missing required frontmatter (title)
+
+  # ── 3. docs.json Navigation Validation ────────────────────────────────────
+
+  navigation-check:
+    name: Validate docs.json Navigation
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check docs.json is valid JSON
+        run: |
+          if ! python3 -c "import json; json.load(open('docs.json'))"; then
+            echo "::error::docs.json is not valid JSON"
+            exit 1
+          fi
+          echo "docs.json is valid JSON"
+
+      - name: Check all referenced pages exist
+        run: |
+          FAILED=0
+          # Extract all page paths from docs.json
+          PAGES=$(python3 -c "
+          import json, sys
+          def extract_pages(obj):
+              if isinstance(obj, str):
+                  print(obj)
+              elif isinstance(obj, list):
+                  for item in obj:
+                      extract_pages(item)
+              elif isinstance(obj, dict):
+                  if 'pages' in obj:
+                      extract_pages(obj['pages'])
+                  if 'page' in obj:
+                      extract_pages(obj['page'])
+                  for v in obj.values():
+                      if isinstance(v, (list, dict)):
+                          extract_pages(v)
+          with open('docs.json') as f:
+              data = json.load(f)
+          extract_pages(data.get('navigation', {}))
+          ")
+
+          for page in $PAGES; do
+            # Mintlify resolves pages as <path>.mdx or <path>.md or <path>/index.mdx
+            if [ ! -f "${page}.mdx" ] && [ ! -f "${page}.md" ] && [ ! -f "${page}/index.mdx" ]; then
+              echo "::error::Page referenced in docs.json not found: ${page} (tried ${page}.mdx, ${page}.md, ${page}/index.mdx)"
+              FAILED=1
+            fi
+          done
+
+          if [ "$FAILED" -eq 0 ]; then
+            echo "All pages in docs.json exist"
+          fi
+          exit $FAILED
+
+      - name: Check for orphaned pages (not in docs.json)
+        run: |
+          # Get all page paths from docs.json
+          REFERENCED=$(python3 -c "
+          import json
+          def extract_pages(obj):
+              if isinstance(obj, str):
+                  print(obj)
+              elif isinstance(obj, list):
+                  for item in obj:
+                      extract_pages(item)
+              elif isinstance(obj, dict):
+                  if 'pages' in obj:
+                      extract_pages(obj['pages'])
+                  if 'page' in obj:
+                      extract_pages(obj['page'])
+                  for v in obj.values():
+                      if isinstance(v, (list, dict)):
+                          extract_pages(v)
+          with open('docs.json') as f:
+              data = json.load(f)
+          extract_pages(data.get('navigation', {}))
+          " | sort -u)
+
+          # Find all content files
+          find docs -\( -name "*.mdx" -o -name "*.md" \) -not -name "INSTRUCTIONS.md" -not -name "README.md" -not -name "llms*.txt" | while read -r file; do
+            # Strip extension to get the page path
+            page_path="${file%.*}"
+            if ! echo "$REFERENCED" | grep -qF "$page_path"; then
+              echo "::warning file=$file::Page not referenced in docs.json navigation (orphaned)"
+            fi
+          done
+
+  # ── 4. AI Readability / LLMs.txt Check ────────────────────────────────────
+
+  llms-txt-check:
+    name: Validate llms.txt
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check llms.txt exists
+        run: |
+          # Check both possible locations
+          if [ -f "docs/llms.txt" ]; then
+            LLMS_FILE="docs/llms.txt"
+          elif [ -f "llms.txt" ]; then
+            LLMS_FILE="llms.txt"
+          else
+            echo "::error::llms.txt not found in docs/ or project root"
+            exit 1
+          fi
+          echo "llms.txt found at $LLMS_FILE"
+          wc -l "$LLMS_FILE"
+
+      - name: Validate llms.txt structure
+        run: |
+          LLMS_FILE="docs/llms.txt"
+          [ ! -f "$LLMS_FILE" ] && LLMS_FILE="llms.txt"
+
+          for section in "Concepts" "Products" "Privacy" "Reference"; do
+            if ! grep -q "## .*${section}" "$LLMS_FILE"; then
+              echo "::warning::llms.txt missing section containing: ${section}"
+            fi
+          done
+
+  # ── 5. Markdown Lint ──────────────────────────────────────────────────────
+  
+  markdown-lint:
+    name: Lint Markdown
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Run markdownlint
+        uses: DavidAnson/markdownlint-cli2-action@v16
+        with:
+          globs: |
+            docs/**/*.md
+            docs/**/*.mdx
+          config: |
+            {
+              "default": true,
+              "MD013": false,
+              "MD033": false,
+              "MD041": false,
+              "MD028": false,
+              "MD024": false,
+              "MD036": false,
+              "MD025": false,
+              "MD045": false
+            }
+        continue-on-error: true
+
+  # ── 6. Spell Check ────────────────────────────────────────────────────────
+  
+  spell-check:
+    name: Spell Check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Run cspell
+        uses: streetsidesoftware/cspell-action@v6
+        with:
+          files: |
+            docs/**/*.md
+            docs/**/*.mdx
+          config: |
+            {
+              "version": "0.2",
+              "language": "en",
+              "words": [
+                "mintlify", "Mintlify", "frontmatter",
+                "MASP", "ShieldedPool", "Zcash", "Zcosystem",
+                "stCORE", "coreBTC", "CLTV",
+                "DPoW", "DPoS", "satoshi", "Satoshi", "validator",
+                "validators", "tokenomics", "precompile",
+                "hardhat", "foundry", "subgraph", "testnet", "mainnet",
+                "LayerZero", "thirdweb", "metamask", "MetaMask",
+                "redelegation", "redelegate", "unstake", "timelock",
+                "ERC20", "ERC721", "EVM", "RPC", "JSON", "YAML",
+                "llmstxt", "llms", "sidebarTitle",
+                "CCIP", "Chainlink", "coreCCIP",
+                "Groth16", "BN254", "Poseidon", "nullifier",
+                "ECDH", "stealth", "reshield", "npk", "nsk",
+                "USDZ", "ZEC", "ZSP", "DeFi", "ASPs",
+                "ASPManager", "DepositScreener", "AssociationSetProver",
+                "OFAC", "mdx", "MDX"
+              ],
+              "ignorePaths": [
+                "node_modules/**",
+                ".mintlify/**",
+                "docs/llms.txt",
+                "docs/llms-full.txt"
+              ]
+            }
+        continue-on-error: true
+
+  # ── 7. llms-full.txt Check ────────────────────────────────────────────────
+  
+  llms-full-check:
+    name: Validate llms-full.txt
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check llms-full.txt exists and is non-empty
+        run: |
+          LLMS_FULL="docs/llms-full.txt"
+          [ ! -f "$LLMS_FULL" ] && LLMS_FULL="llms-full.txt"
+
+          if [ ! -f "$LLMS_FULL" ]; then
+            echo "::error::llms-full.txt not found"
+            exit 1
+          fi
+          SIZE=$(wc -c < "$LLMS_FULL")
+          if [ "$SIZE" -lt 10000 ]; then
+            echo "::error::llms-full.txt is suspiciously small ($SIZE bytes)"
+            exit 1
+          fi
+          echo "llms-full.txt present and valid ($SIZE bytes)"
+
+  # ── 8. robots.txt + ai.txt Check ─────────────────────────────────────────
+  
+  robots-check:
+    name: Validate AI Discoverability
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check AI permission files
+        run: |
+          # Mintlify auto-generates robots.txt, but check for custom ai.txt
+          if [ -f "ai.txt" ]; then
+            echo "ai.txt found at root"
+          elif [ -f "docs/ai.txt" ]; then
+            echo "ai.txt found in docs/"
+          else
+            echo "::warning::No ai.txt found. Consider adding one for AI crawler permissions."
+          fi
+
+          # Check docs.json for SEO/robots configuration
+          if python3 -c "import json; d=json.load(open('docs.json')); assert 'seo' in d or 'robots' in d" 2>/dev/null; then
+            echo "SEO/robots config found in docs.json"
+          else
+            echo "::warning::No explicit SEO/robots config in docs.json (Mintlify defaults will be used)"
+          fi
+
+  # ── 9. Summary Report ──────────────────────────────────────────────────────
+  summary:
+    name: Post Check Summary
+    runs-on: ubuntu-latest
+    needs:
+      - frontmatter-check
+      - mintlify-build
+      - navigation-check
+      - llms-txt-check
+      - markdown-lint
+      - spell-check
+      - llms-full-check
+      - robots-check
+    if: always() && github.event_name == 'pull_request'
+    steps:
+      - name: Post PR comment
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const jobs = {
+              'Frontmatter Check':     '${{ needs.frontmatter-check.result }}',
+              'Mintlify Build':        '${{ needs.mintlify-build.result }}',
+              'Navigation (docs.json)':'${{ needs.navigation-check.result }}',
+              'LLMs.txt Check':        '${{ needs.llms-txt-check.result }}',
+              'LLMs-full Check':       '${{ needs.llms-full-check.result }}',
+              'AI Discoverability':    '${{ needs.robots-check.result }}',
+              'Markdown Lint':         '${{ needs.markdown-lint.result }}',
+              'Spell Check':           '${{ needs.spell-check.result }}',
+            };
+            const icon = r => r === 'success' ? '\u2705' : r === 'skipped' ? '\u23ed\ufe0f' : '\u274c';
+            const rows = Object.entries(jobs)
+              .map(([name, result]) => `| ${icon(result)} ${name} | ${result} |`)
+              .join('\n');
+            const body = [
+              '## AI Docs Quality Check Results',
+              '',
+              '| Check | Status |',
+              '|-------|--------|',
+              rows,
+              '',
+              '*Powered by Mintlify Docs CI*'
+            ].join('\n');
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body
+            });
