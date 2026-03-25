@@ -1,6 +1,10 @@
 ---
 title: "Why Privacy Now"
 sidebarTitle: "Why Privacy Now"
+description: "Two structural forces are making on-chain privacy urgent. AI has collapsed the cost of mass surveillance. AI agents need private financial rails. This is why Z exists."
+keywords: ['privacy', 'AI surveillance', 'AI agents', 'on-chain privacy', 'metadata', 'transparent blockchain', 'financial rails', 'surveillance']
+ai_summary: "Why privacy is structurally urgent now, not aspirational. Two forces: (1) AI reduces cost of mass surveillance to near zero — permanent public ledgers + cheap AI analysis = any activity is surveillable at scale; (2) AI agents generate orders-of-magnitude more transaction metadata than humans, making the problem much worse for agentic finance. The gap: no programmable privacy platform exists today. Z fills it with EVM compatibility + Zcash ZK-proof privacy."
+---
 ---
 
 # Why Privacy Now

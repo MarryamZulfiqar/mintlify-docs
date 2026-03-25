@@ -1,13 +1,14 @@
 ---
-title: MASP Integration Guide
-description: How to build a contract or application that integrates with the ShieldedPool. The MASP interface, note model, broadcaster pattern, and common integration paths.
-keywords: [MASP, integration, shield, transact, unshield, notes, commitments, broadcaster, ShieldedPool, developer]
-ai_summary: MASP integration conceptual guide. Three integration depths: (1) Read-only — query MASP state (Merkle root, nullifier set) from any contract. (2) User-facing app — use the broadcaster pattern and ZK proofs generated client-side. (3) ZApp with private execution — implement RelayAdapter for atomic unshield+execute+reshield. MASP holds UTXO-based notes. Commitment = Poseidon(Poseidon(npk, tokenHash, value), random, 0). Nullifier = Poseidon(nsk, leafIndex). Spending a note publishes its nullifier. New notes are inserted as commitments. 128-root Merkle history buffer prevents race conditions. Broadcaster pattern: user generates ZK proof, sends to broadcaster, broadcaster pays gas.
+title: "MASP Integration Guide"
+sidebarTitle: "MASP Integration Guide"
+description: "How to build a contract or application that integrates with the ShieldedPool. The MASP interface, note model, broadcaster pattern, and common integration paths."
+keywords: ['MASP', 'integration', 'shield', 'transact', 'unshield', 'commitments', 'broadcaster', 'ShieldedPool', 'developer']
+ai_summary: "MASP integration conceptual guide. Three integration depths: (1) Read-only — query MASP state (Merkle root, nullifier set) from any contract. (2) User-facing app — use the broadcaster pattern and ZK proofs generated client-side. (3) ZApp with private execution — implement RelayAdapter for atomic unshield+execute+reshield. MASP holds UTXO-based notes. Commitment = Poseidon(Poseidon(npk, tokenHash, value), random, 0). Nullifier = Poseidon(nsk, leafIndex). Spending a note publishes its nullifier. New notes are inserted as commitments. 128-root Merkle history buffer prevents race conditions. Broadcaster pattern: user generates ZK proof, sends to broadcaster, broadcaster pays gas."
 ---
 
 # MASP Integration Guide
 
-This page explains how to build contracts and applications that interact with the ShieldedPool. It assumes you've read [Privacy Architecture](../core-concepts/privacy-architecture.md) and understand the note-and-nullifier model.
+This page explains how to build contracts and applications that interact with the ShieldedPool. It assumes you've read [Privacy Architecture](/docs/core-concepts/privacy-architecture) and understand the note-and-nullifier model.
 
 ---
 
@@ -86,7 +87,7 @@ For DeFi applications that need to execute atomically from the MASP:
 
 The RelayAdapter contract accepts a ZK proof from a user, verifies it through the MASP, executes a DeFi action (swap, lend, borrow) atomically, and reshields the output back into the MASP — all in one transaction.
 
-For the full implementation reference, see [RelayAdapter Pattern](./relayAdapter-pattern.md).
+For the full implementation reference, see [RelayAdapter Pattern](/docs/for-developers/relayAdapter-pattern).
 
 ---
 
@@ -106,7 +107,7 @@ Broadcaster:
   6. Receive fee from user's shielded note (atomic, within the MASP transaction)
 ```
 
-For the broadcaster API specification and how to run your own broadcaster, see [Broadcaster Network](./broadcaster-network.md).
+For the broadcaster API specification and how to run your own broadcaster, see [Broadcaster Network](/docs/for-developers/broadcaster-network).
 
 ---
 

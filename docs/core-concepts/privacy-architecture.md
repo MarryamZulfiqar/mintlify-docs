@@ -1,8 +1,8 @@
 ---
-title: Privacy Architecture
-description: Z severs the connection between on-chain activity and identity through the Multi-Asset Shielded Pool and one-time stealth addresses. What's private, what's unlinkable, and how each mechanism works.
-keywords: [MASP, ShieldedPool, stealth addresses, Groth16, BN254, ZK proofs, Poseidon, nullifier, commitment, viewing key, broadcaster, privacy model, unlinkable, shielded]
-ai_summary: Z uses two privacy mechanisms. (1) MASP (Multi-Asset Shielded Pool): UTXO-based notes. Commitment = Poseidon(Poseidon(npk, tokenHash, value), random, 0). Nullifier = Poseidon(nsk, leafIndex). Merkle tree depth 16, 65,536 leaves, 128-root history buffer. Every MASP transaction includes Groth16 proof on BN254 (~250k gas to verify). (2) Stealth addresses: DeFi exits use fresh ECDH one-time addresses (ERC-5564). Activity visible but unlinkable to identity or pool balance. Broadcaster network: user submits signed proof to broadcaster who pays gas — user address never appears as msg.sender. boundParamsHash = keccak256(recipient, token, amount, fee, broadcaster) % FIELD. Key hierarchy: spendingKey = Poseidon(masterKey, 0), nsk = Poseidon(spendingKey, 0), npk = Poseidon(nsk), viewingKey = Poseidon(masterKey, 1). Groth16 trusted setup: Hermez Ceremony Phase 1 + circuit-specific Phase 2. Verification keys deployed via 48-hour timelock.
+title: "Privacy Architecture"
+description: "Z severs the connection between on-chain activity and identity through the Multi-Asset Shielded Pool and one-time stealth addresses. What's private, what's unlinkable, and how each mechanism works."
+keywords: ['MASP', 'ShieldedPool', 'stealth addresses', 'Groth16', 'BN254', 'ZK proofs', 'Poseidon', 'nullifier', 'commitment', 'viewing key', 'broadcaster', 'privacy model', 'unlinkable', 'shielded']
+ai_summary: "Z uses two privacy mechanisms. (1) MASP (Multi-Asset Shielded Pool): UTXO-based notes. Commitment = Poseidon(Poseidon(npk, tokenHash, value), random, 0). Nullifier = Poseidon(nsk, leafIndex). Merkle tree depth 16, 65,536 leaves, 128-root history buffer. Every MASP transaction includes Groth16 proof on BN254 (~250k gas to verify). (2) Stealth addresses: DeFi exits use fresh ECDH one-time addresses (ERC-5564). Activity visible but unlinkable to identity or pool balance. Broadcaster network: user submits signed proof to broadcaster who pays gas — user address never appears as msg.sender. boundParamsHash = keccak256(recipient, token, amount, fee, broadcaster) % FIELD. Key hierarchy: spendingKey = Poseidon(masterKey, 0), nsk = Poseidon(spendingKey, 0), npk = Poseidon(nsk), viewingKey = Poseidon(masterKey, 1). Groth16 trusted setup: Hermez Ceremony Phase 1 + circuit-specific Phase 2. Verification keys deployed via 48-hour timelock."
 ---
 
 # Privacy Architecture
@@ -158,7 +158,7 @@ Users can share a viewing key with regulators, auditors, or counterparties to pr
 
 **A viewing key cannot:** spend funds, view other users' activity, modify or selectively omit transactions within its scope.
 
-This is functionally similar to a bank providing account statements to a regulator: per-user visibility without requiring the entire system's records to be public. For the full compliance architecture, see [Privacy & Compliance](../compliance/privacy-and-compliance.md).
+This is functionally similar to a bank providing account statements to a regulator: per-user visibility without requiring the entire system's records to be public. For the full compliance architecture, see [Privacy & Compliance](/docs/compliance/privacy-and-compliance).
 
 ---
 
