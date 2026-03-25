@@ -1,6 +1,5 @@
 # ============================================================================
 # AI Docs Quality Check — Mintlify Edition
-# Adapted from Docusaurus workflow for Mintlify docs structure
 # ============================================================================
 name: AI Docs Quality Check
 
@@ -24,14 +23,7 @@ permissions:
 
 jobs:
   # ── 1. Frontmatter Validation ─────────────────────────────────────────────
-  #
-  # WHAT CHANGED from Docusaurus:
-  #   - Docusaurus required: id, sidebar_label, sidebar_position,
-  #     hide_table_of_contents, pagination_next, pagination_prev
-  #   - Mintlify uses: title, sidebarTitle, description, keywords
-  #   - Navigation/ordering is controlled by docs.json, NOT frontmatter
-  #   - Scans .mdx files (Mintlify default), not just .md
-  #
+
   frontmatter-check:
     name: Validate Mintlify Frontmatter
     runs-on: ubuntu-latest
@@ -78,14 +70,7 @@ jobs:
           exit $FAILED
 
   # ── 2. Mintlify Build Check ───────────────────────────────────────────────
-  #
-  # WHAT CHANGED from Docusaurus:
-  #   - Docusaurus used: yarn install && yarn build
-  #   - Mintlify uses: npx mintlify build (no node_modules needed)
-  #   - This replaces the commented-out "link-check" job
-  #   - mintlify build validates all internal links, broken refs, and
-  #     missing pages referenced in docs.json navigation
-  #
+
   mintlify-build:
     name: Mintlify Build & Link Check
     runs-on: ubuntu-latest
@@ -109,13 +94,7 @@ jobs:
         #   - Missing required frontmatter (title)
 
   # ── 3. docs.json Navigation Validation ────────────────────────────────────
-  #
-  # WHAT'S NEW (Mintlify-specific):
-  #   - Mintlify defines all navigation in docs.json, not frontmatter
-  #   - This checks that every page referenced in docs.json actually exists
-  #   - Also checks that every .mdx file is referenced in docs.json
-  #     (catches orphaned pages)
-  #
+
   navigation-check:
     name: Validate docs.json Navigation
     runs-on: ubuntu-latest
@@ -202,12 +181,7 @@ jobs:
           done
 
   # ── 4. AI Readability / LLMs.txt Check ────────────────────────────────────
-  #
-  # WHAT CHANGED from Docusaurus:
-  #   - Docusaurus stored these in static/llms.txt
-  #   - Mintlify serves from project root, so check docs/llms.txt
-  #     (where your files actually live)
-  #
+
   llms-txt-check:
     name: Validate llms.txt
     runs-on: ubuntu-latest
@@ -240,13 +214,7 @@ jobs:
           done
 
   # ── 5. Markdown Lint ──────────────────────────────────────────────────────
-  #
-  # WHAT CHANGED from Docusaurus:
-  #   - Globs now scan docs/**/*.mdx AND docs/**/*.md
-  #   - Added MD045 disable (Mintlify image components don't need alt in
-  #     standard markdown form)
-  #   - MD025 disabled (Mintlify title comes from frontmatter, not # heading)
-  #
+  
   markdown-lint:
     name: Lint Markdown
     runs-on: ubuntu-latest
@@ -274,13 +242,7 @@ jobs:
         continue-on-error: true
 
   # ── 6. Spell Check ────────────────────────────────────────────────────────
-  #
-  # WHAT CHANGED from Docusaurus:
-  #   - Globs updated to scan .mdx files
-  #   - Added Mintlify-specific terms to dictionary
-  #   - Removed Docusaurus-specific ignorePaths, added Mintlify ones
-  #   - Added project-specific terms (Z Protocol, MASP, etc.)
-  #
+  
   spell-check:
     name: Spell Check
     runs-on: ubuntu-latest
@@ -325,10 +287,7 @@ jobs:
         continue-on-error: true
 
   # ── 7. llms-full.txt Check ────────────────────────────────────────────────
-  #
-  # WHAT CHANGED from Docusaurus:
-  #   - Path changed from static/llms-full.txt to docs/llms-full.txt
-  #
+  
   llms-full-check:
     name: Validate llms-full.txt
     runs-on: ubuntu-latest
@@ -352,14 +311,7 @@ jobs:
           echo "llms-full.txt present and valid ($SIZE bytes)"
 
   # ── 8. robots.txt + ai.txt Check ─────────────────────────────────────────
-  #
-  # WHAT CHANGED from Docusaurus:
-  #   - Docusaurus used static/ directory
-  #   - Mintlify: these files should be placed at project root or handled
-  #     via docs.json redirects. Mintlify auto-generates robots.txt, so
-  #     this job now just warns if custom overrides are missing.
-  #   - You can also configure robots in docs.json under "seo" settings
-  #
+  
   robots-check:
     name: Validate AI Discoverability
     runs-on: ubuntu-latest
