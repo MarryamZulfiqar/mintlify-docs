@@ -1,7 +1,6 @@
 ---
 title: "Developer Quick Start"
 sidebarTitle: "Developer Quick Start"
-description: "Connect to Z, deploy your first contract, and run a local devnet. Z is EVM-compatible — existing Solidity contracts deploy without modification."
 keywords: ['quick start', 'developer', 'EVM', 'Solidity', 'deploy', 'devnet', 'Docker', 'ZSP', 'network config']
 ai_summary: "Z is EVM-compatible. Existing Solidity deploys to Z without code changes, just network config update. Local development: Docker-based ZSP devnet with ./cli init, ./cli start, ./cli smoke. RPC endpoint defaults: HTTP localhost:8545, WebSocket localhost:8546. Production network details (chain ID, RPC URL, block explorer, testnet faucet) not yet finalized — requires engineering team input."
 ---

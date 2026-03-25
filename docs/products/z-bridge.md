@@ -1,6 +1,5 @@
 ---
 title: "Z Bridge"
-description: "How assets enter Z. The ZEC SPV Bridge uses cryptographic verification with no custodian. The LayerZero Bridge handles stablecoins and other ERC-20s. Both support direct-to-MASP deposits."
 keywords: ['Z Bridge', 'ZEC bridge', 'SPV', 'LayerZero', 'USDC', 'USDT', 'cross-chain', 'shielded deposit', 'MASP', 'Zcash Light Client', 'Equihash', 'Blake2b', 'FROST']
 ai_summary: "Z has two bridge mechanisms. (1) ZEC SPV Bridge (post-launch, not at launch): trustless, no custodian. User sends ZEC on Zcash. Relayer submits SPV proof. Z's Zcash Light Client verifies block header via Equihash precompile (0x0B) and transaction inclusion via Blake2b precompile (0x0C). ZEC notes minted directly in MASP. Confirmation depth: 6 Zcash blocks (~7.5 min). Transparent Zcash transactions only at launch. ZEC withdrawals via FROST (not at launch — priority post-launch addition). (2) LayerZero Bridge (at launch): USDC, USDT, other ERC-20s from Ethereum/Arbitrum/Base. Three message types: 0x01 shielded mint (commitment only, private), 0x03 direct mint (recipient + amount, public), 0x02 burn+unlock (withdrawal, public). Stablecoin withdrawals at launch. Future: ZK-Prover Pipeline, ZK-Bridge."
 ---

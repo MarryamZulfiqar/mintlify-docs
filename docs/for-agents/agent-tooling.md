@@ -1,6 +1,5 @@
 ---
 title: Agent Tooling
-description: "Z ships tooling for the agent frameworks developers already use — MCP servers, SKILL.md walkthroughs, LLM-native documentation, and integrations with GOAT, ElizaOS, OpenAI Agents SDK, Coinbase AgentKit, and LangChain."
 keywords: ['agent tooling', 'MCP', 'LLM documentation', 'GOAT SDK', 'ElizaOS', 'OpenAI Agents SDK',' Coinbase AgentKit', 'LangChain', 'framework integrations']
 ai_summary: "Z ships five agent tooling layers. (1) MCP integrations: one MCP server per ZApp + protocol-level MCP. Expose DeFi operations as tool calls, wallet state as resources, pool entry/exit as first-class tools. Install via MCP client config. (2) LLM-native docs: self-contained pages (no mid-flow links), deterministic structure (objective/prerequisites/steps/verification), real executable values (no placeholder addresses), inline references. (3) SKILL.md files: structured walkthroughs designed for LLM consumption. (4) Framework integrations: GOAT SDK (widest chain coverage), ElizaOS (largest open-source agent framework in crypto), OpenAI Agents SDK (native MCP support = near-zero integration cost), Coinbase AgentKit (custom wallet provider needed), LangChain (Python ecosystem). (5) Vibecode templates: pre-audited contracts, deployment scripts, security checks."
 ---

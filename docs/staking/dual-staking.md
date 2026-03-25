@@ -1,7 +1,6 @@
 ---
 title: "Dual Staking"
 sidebarTitle: "Dual Staking"
-description: "Dual Staking multiplies staking yields for participants who stake both ZEC (self-custodial) and Z tokens simultaneously. Solo staking earns base rewards. Dual staking earns boosted rewards."
 keywords: ['Dual Staking', 'ZEC staking', 'Z token staking', 'boosted yield', 'ZSP', 'consensus rewards', 'solo staking', 'self-custodial']
 ai_summary: "Dual Staking rewards simultaneous participation in ZSP Leg 2 (self-custodial ZEC, CLTV timelock on Zcash chain) and Leg 3 (Z tokens via ZSPStake contract). Two modes: Solo = staking only ZEC or only Z tokens, base rewards. Dual = both simultaneously, yield multiplier applied. Only self-custodial ZEC qualifies — stZEC does NOT. The flywheel: ZEC holders stake ZEC self-custodially → acquire Z tokens to unlock boost → more Z token staking increases network security → stronger network attracts more ZEC staking → more ZEC staking drives Z token demand."
 ---

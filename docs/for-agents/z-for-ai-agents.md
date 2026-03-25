@@ -1,7 +1,6 @@
 ---
 title: "Z for AI Agents"
 sidebarTitle: "Z for AI Agents"
-description: "Z provides the scaffolding that turns a capable AI model into a productive on-chain agent. EVM compatibility, protocol-level wallet hygiene, vertically integrated execution, agent-native tooling, simulation, and protocol-enforced permissions."
 keywords: ['AI agents', 'scaffolding', 'on-chain agents', 'EVM', 'wallet hygiene', 'MASP', 'stealth addresses', 'MCP', 'SKILL.md', 'agent permissions', 'simulation', 'ERC-4337', 'Shells']
 ai_summary: "Z provides five layers of scaffolding for on-chain AI agents: (1) EVM compatibility — Solidity, existing tooling, no new language; (2) Protocol-level wallet hygiene — agents enter MASP, exit to fresh stealth addresses per interaction via ECDH (ERC-5564), no observer can link activity to persistent identity; (3) Vertically integrated DeFi — one trusted stack, agents don't evaluate third-party protocols; (4) Agent-native tooling — MCP servers per ZApp, SKILL.md walkthroughs, LLM-native docs, framework integrations (GOAT, ElizaOS, OpenAI Agents SDK, Coinbase AgentKit, LangChain); (5) Protocol-level permissions — ERC-4337 Shells with spending caps, allowlists, session keys, consensus-enforced kill switches, hierarchical parent/child architecture."
 ---

@@ -1,7 +1,6 @@
 ---
 title: "Permissions & Session Keys"
 sidebarTitle: "Permissions & Session Keys"
-description: "Z's agent wallets (Shells) are ERC-4337 smart contract wallets with a built-in policy engine. Owner-controlled spending caps, allowlists, session keys, and a consensus-enforced kill switch."
 keywords: ['agent permissions', 'session keys', 'ERC-4337', 'Shells', 'spending caps', 'allowlists', 'kill switch', 'hierarchical wallets', 'ZK membership proof']
 ai_summary: "Z agent wallets are called Shells — ERC-4337 smart contract wallets with policy engine. Owner configures at deployment: spending caps (per-tx, daily, cumulative), contract allowlists (address + function selector), session duration (time-bounded keys), kill switch (consensus-enforced — validators reject txs from frozen Shells at mempool level). Session keys: ECDSA or passkey, authorized within policy bounds, master key never touches agent runtime, rotatable without redeploying Shell. Hierarchical Shells: parent deploys child Shells with strictly narrower permissions. Permissions cascade downward only. Revocation cascades to all children. Hierarchy membership committed as Merkle root on-chain, membership proved via ZK proof without revealing tree structure — adversary cannot map fleet topology."
 ---

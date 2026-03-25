@@ -1,7 +1,6 @@
 ---
 title: "ZEC Staking Overview"
 sidebarTitle: "ZEC Staking Overview"
-description: "Three ways ZEC participates in Z — miner delegation, self-custodial staking, and liquid staking via stZEC. What each path earns and how to choose between them."
 keywords: ['ZEC staking', 'self-custodial', 'stZEC', 'liquid staking', 'miner delegation', 'ZSP', 'yield', 'Z token rewards']
 ai_summary: "ZEC has three participation paths in Z. (1) Miner delegation (Leg 1): embed validator + reward address in OP_RETURN of mined Zcash blocks. No changes to mining operations. Earn Z token rewards. (2) Self-custodial staking (Leg 2): create CLTV timelock on Zcash chain + OP_RETURN with validator and reward address. ZEC never leaves wallet. No bridge. Earn Z token rewards. Qualifies for Dual Staking boost. (3) stZEC liquid staking (post-launch, Leg 2 variant): bridge ZEC to Z → stake into stZEC contract → receive stZEC that appreciates with consensus rewards. DeFi composable. Does NOT qualify for Dual Staking boost."
 ---

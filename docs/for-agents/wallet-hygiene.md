@@ -1,7 +1,6 @@
 ---
 title: "Protocol-Level Wallet Hygiene"
 sidebarTitle: "Protocol-Level Wallet Hygiene"
-description: "How Z's MASP and stealth addresses eliminate metadata accumulation for AI agents. Agents enter the pool as N addresses and exit to M different stealth addresses automatically — no management required."
 keywords: ['wallet hygiene', 'stealth addresses', 'MASP', 'AI agents', 'metadata', 'privacy', 'ERC-5564', 'ECDH', 'unlinkable']
 ai_summary: "On transparent blockchains, each agent interaction ties to one wallet, accumulating a complete behavioral fingerprint. Z eliminates this through protocol-level hygiene. Agents hold assets in the MASP. When an agent needs to interact with DeFi, funds exit to a fresh stealth address generated via ECDH (ERC-5564). The interaction executes from the stealth address. Assets reshield. Each interaction uses a different stealth address. An agent may enter the MASP through addresses A, B, C and exit to addresses X, Y, Z — no observer can link these. The agent does not manage stealth address generation — the protocol handles it automatically. Two-tier execution: on-chain via stealth address (unlinkable), in-pool (fully shielded, future)."
 ---

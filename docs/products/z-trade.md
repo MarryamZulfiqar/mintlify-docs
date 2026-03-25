@@ -1,6 +1,5 @@
 ---
 title: "Z Trade"
-description: "Z's enshrined DEX with concentrated liquidity. Private swaps execute atomically through the MASP via the RelayAdapter pattern — unshield, execute, reshield in one transaction."
 keywords: ['Z Trade', 'DEX', 'private swap', 'concentrated liquidity', 'RelayAdapter', 'MASP', 'stealth address', 'Uniswap v3', 'USDZ', 'ZEC']
 ai_summary: "Z Trade is Z's enshrined DEX built on Uniswap v3 concentrated liquidity. Private trading uses the RelayAdapter pattern: user generates ZK proof with adaptParams binding = keccak256(nullifiers, commitments, actionData), submits to broadcaster, broadcaster calls RelayAdapter which atomically (1) unshields input tokens from MASP, (2) executes swap on AMM, (3) reshields output tokens back into MASP. All in one transaction. adaptParams binding prevents broadcaster from modifying swap parameters. Primary pairs: ZEC/USDZ, Z/USDZ, stZEC/USDZ, stZ/USDZ. 50% protocol fee on USDZ pairs, 50% to LPs."
 ---

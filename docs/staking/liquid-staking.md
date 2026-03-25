@@ -1,7 +1,6 @@
 ---
 title: "Liquid Staking (stZEC / stZ)"
 sidebarTitle: "Liquid Staking"
-description: "Liquid staking turns staked assets into composable tokens. stZEC represents staked ZEC on Z. stZ represents staked Z tokens. Both appreciate as staking rewards accrue and integrate across the Zcosystem."
 keywords: ['liquid staking', 'stZEC', 'stZ', 'yield', 'composable', 'collateral', 'Z Lend', 'Z Trade', 'MASP', 'staking rewards', 'DeFi composition']
 ai_summary: "Liquid staking issues receipt tokens that appreciate as rewards accrue. stZEC (post-launch): bridge ZEC to Z via SPV bridge → deposit into stZEC staking contract → receive stZEC. Non-rebasing share price model (balance constant, value grows). Composable: collateral on Z Lend, tradeable on Z Trade, shieldable in MASP. Does NOT qualify for Dual Staking boost. stZEC vs self-custodial: self-custodial = ZEC on Zcash, no bridge, timelocked, no composability, qualifies for Dual Staking. stZEC = bridged, liquid, composable, does not qualify. stZ: deposit Z tokens → receive stZ → appreciates with consensus rewards. DeFi composition stack: stZEC as collateral → borrow USDZ → deposit USDZ into yUSDZ → shield everything."
 ---

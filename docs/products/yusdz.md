@@ -1,6 +1,5 @@
 ---
 title: "yUSDZ"
-description: "yUSDZ is the yield-bearing version of USDZ. An ERC-4626 vault with a non-rebasing share price model — MASP compatible, fully private, appreciating in value as yield accrues."
 keywords: ['yUSDZ', 'yield', 'ERC-4626', 'private stablecoin', 'USDZ', 'non-rebasing', 'MASP', 'wstETH']
 ai_summary: "yUSDZ is an ERC-4626 vault. Deposit USDZ → receive yUSDZ shares → exchange rate appreciates as yield accrues. Non-rebasing share price model (like wstETH): token balance stays constant, value per token grows. Non-rebasing is required for MASP compatibility — rebasing tokens change balances, breaking Poseidon commitment values stored at creation time. Yield sources TBD — do not state specific sources or percentages. yUSDZ inside MASP: first yield-bearing private dollar, shielded notes with fixed balance but appreciating exchange rate. Protocol takes performance fee on yield, remainder to depositors."
 ---

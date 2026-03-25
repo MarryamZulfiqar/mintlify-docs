@@ -1,6 +1,5 @@
 ---
 title: "ShieldedPool (MASP)"
-description: "The Multi-Asset Shielded Pool is Z's home base. Assets enter as private notes, balances are fully shielded, and transfers reveal nothing to outside observers. This page covers the user-facing view."
 keywords: ['ShieldedPool', 'MASP', 'private balances','shield', 'commitment', 'viewing key', 'stealth address', 'ZEC', 'USDZ']
 ai_summary: "The MASP is Z's core privacy layer from a user perspective. Assets enter via LayerZero (stablecoins, at launch) or ZEC SPV bridge (post-launch). Shielded minting: user generates Poseidon commitment off-chain, only commitment crosses bridge, USDZ minted into ShieldedMinter vault, user claims via ZK proof — source chain deposit and Z balance are unlinkable. Inside MASP: UTXO-based notes, balances are commitments in Merkle tree, private transfers reveal nothing. Exit: to stealth address for DeFi (handled automatically by RelayAdapter), or to plaintext address (amount and recipient visible on-chain, MASP origin not). Viewing keys: read-only, scopable to time period, cannot spend or omit."
 ---

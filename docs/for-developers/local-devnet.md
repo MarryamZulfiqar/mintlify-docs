@@ -1,6 +1,5 @@
 ---
 title: "Local Devnet"
-description: "Docker-based local ZSP devnet with Zcash regtest integration, protocol inspection, scenario runners, and full integration test wiring. Everything you need to develop against the full Z stack locally."
 keywords: ['devnet', 'Docker', 'ZSP', 'local development', 'Zcash regtest', 'scenarios', 'fixtures', 'CLI', 'RPC endpoints', 'integration testing']
 ai_summary: "ZSP devnet is a Docker-based local stack from github.com/protocol-z/devnet. Runs: ZSP nodes (bootnode, 4 validators, rpc0, rpc1, archive, full-sync), Zcash lane (zcashd regtest, zcash-relayer, zcashpowermirror), support services (rpc-proxy, indexer), monitoring (Prometheus, Grafana, Loki). System contracts deployed: ValidatorSet, CandidateHub, SlashIndicator, SystemReward, GovHub, StakeHub, EquihashPowerAgent, ZcashLightClient, ZcashAgent, ZcashStake, RelayerHub. Quick start: cp .env.example .env && ./cli init && ./cli start && ./cli smoke. RPC defaults: HTTP 8545/8547, WS 8546/8548, archive 8555, rpc-proxy HTTP 8580, rpc-proxy WS 8581, Zcash 8232. Full CLI surface for status, inspection, scenarios, faults, snapshots."
 ---

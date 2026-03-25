@@ -1,7 +1,6 @@
 ---
 title: "FAQ"
 sidebarTitle: "FAQs"
-description: "Common questions about Z Protocol, organized by topic."
 keywords: ['FAQ', 'frequently asked questions', 'Z Protocol', 'privacy', 'ZEC', 'staking', 'USDZ', 'Z token', 'EVM', 'ZSP', 'agents']
 ai_summary: "Frequently asked questions about Z Protocol. General: what is Z, relation to Zcash (powered by, not L2), relation to Core (ZSP inspired by Satoshi Plus), architecture (independent protocol with own consensus/validator set/token). Privacy: not everything private (in-pool = shielded, DeFi via stealth = unlinkable), not privacy by default (opt-in), compliance via viewing keys + Privacy Pools, ZK proofs not encryption, difference from Monero (ZK-SNARKs vs ring signatures), difference from Aztec (EVM not Noir, not L2, enshrined DeFi). ZEC: use without Z token (yes, gas payable in ZEC), earn yield multiple ways, self-custodial staking keeps ZEC in wallet, miners participate with no changes. USDZ: 1:1 USDC/USDT backed, yUSDZ is yield-bearing version. Z token: gas + staking + governance + value accrual, 1B fixed supply. Technical: EVM compatible, ZSP consensus, SPV bridge."
 ---

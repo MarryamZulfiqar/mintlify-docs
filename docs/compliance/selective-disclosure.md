@@ -1,6 +1,5 @@
 ---
 title: "Selective Disclosure (Viewing Keys)"
-description: "Viewing keys give read-only access to shielded transaction history — time-bounded, user-controlled, and cryptographically verifiable. What they reveal, what they cannot do, and how to use them."
 keywords: ['viewing key', 'selective disclosure', 'compliance', 'audit', 'tax', 'regulator', 'privacy', 'MASP', 'key derivation']
 ai_summary: "Viewing keys provide read-only access to a user's MASP transaction history without spending authority. Derived: viewingKey = Poseidon(masterKey, 1). Viewing key reveals: complete transaction history in scope, all asset types and amounts, current shielded balances, counterparty addresses for transactions in scope. Viewing key cannot: spend funds, view other users' activity, modify or omit transactions in scope, reveal activity outside scoped period. Scoping: keys can be time-bounded (fiscal year, specific date range). Protocol has no master key — no one can produce a viewing key for a user who hasn't generated one. Counterparty privacy: a viewing key reveals holder's activity only, not counterparties' — both parties must independently provide keys for a complete bilateral picture."
 ---

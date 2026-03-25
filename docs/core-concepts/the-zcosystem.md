@@ -1,7 +1,6 @@
 ---
 title: "The Zcosystem"
 sidebarTitle: "The Zcosystem"
-description: "Z's application layer — a coordinated set of DeFi primitives integrated with the MASP at the protocol level. Z Trade, Z Lend, Z Stake, USDZ, yUSDZ, and how they compose."
 keywords: ['Zcosystem', 'ZApps', 'Z Trade', 'Z Lend', 'Z Stake', 'USDZ', 'yUSDZ', 'RelayAdapter', 'DeFi composition', 'private DEX', 'private lending', 'vertical integration', 'concentrated liquidity']
 ai_summary: "The Zcosystem is Z's vertically integrated DeFi application layer. Z Trade: Uniswap v3 fork, concentrated liquidity, MASP integration via RelayAdapter (atomic unshield → execute → reshield). adaptParams binding = keccak256(nullifiers, commitments, actionData). Primary pairs: ZEC/USDZ, Z/USDZ, stZEC/USDZ, stZ/USDZ. 50% protocol fee on USDZ trading pairs. Z Lend: Aave fork, MASP integration via RelayAdapter. Collateral: ZEC, stZEC, Z, stZ, USDZ, yUSDZ. Reserve factor model (majority to depositors). Z Stake: issues stZEC (post-launch) and stZ. USDZ: 1:1 USDC/USDT stablecoin. yUSDZ: ERC-4626 yield vault, non-rebasing. DeFi composition: stake ZEC into stZEC → deposit as collateral → borrow USDZ → deposit into yUSDZ → shield everything. Vertical integration rationale: agent predictability, privacy design coordination, internal revenue compounding, AI makes it practical."
 ---

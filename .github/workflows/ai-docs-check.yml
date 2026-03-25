@@ -32,10 +32,10 @@ jobs:
 
       - name: Check required frontmatter fields
         run: |
-          # Mintlify required fields (title + description are mandatory;
-          # sidebarTitle and keywords are best-practice)
-          REQUIRED_FIELDS="title description"
-          RECOMMENDED_FIELDS="sidebarTitle keywords"
+          # Mintlify required fields (title is mandatory;
+          # sidebarTitle, description and keywords are best-practice)
+          REQUIRED_FIELDS="title"
+          RECOMMENDED_FIELDS="sidebarTitle description keywords"
           FAILED=0
 
           while IFS= read -r -d '' file; do

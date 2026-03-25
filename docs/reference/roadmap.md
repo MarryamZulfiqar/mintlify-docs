@@ -1,7 +1,6 @@
 ---
 title: "Roadmap"
 sidebarTitle: "Roadmap"
-description: "What ships at launch and what comes after. Present tense for launched features. Future tense for planned features."
 keywords: ['roadmap', 'launch', p'ost-launch', 'ZSP', 'MASP', 'Z Trade', 'Z Lend', 'USDZ', 'stZEC', 'ZEC bridge', 'private staking', 'in-pool DeFi']
 ai_summary: "Launch features: ZSP consensus (all three legs), ShieldedPool (MASP) with UTXO notes and Groth16 proofs, stealth addresses via RelayAdapter, compliance infrastructure (KYC/OFAC address blocking via ASPs), relayer network (protocol-operated at launch, permissionless to follow), stZ liquid staking for Z tokens, LayerZero bridge for USDC/USDT/other assets with direct MASP deposit, Z Trade (enshrined DEX, Uniswap v3), Z Lend (enshrined lending/borrowing, Aave), USDZ (1:1 USDC/USDT private stablecoin), yUSDZ (yield-bearing USDZ vault). Post-launch: stZEC (liquid staking for ZEC), ZEC bridge into ShieldedPool (SPV-verified), shielded staking payouts, partially shielded staking, reduced block times (0.75s, Core hardfork), in-pool RFQ swaps, in-pool lending, Z Perps, Z Predict, custodian support, post-quantum signatures research, fully shielded staking research, fully private DeFi research."
 ---

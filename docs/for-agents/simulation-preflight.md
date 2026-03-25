@@ -1,7 +1,6 @@
 ---
 title: "Simulation & Preflight"
 sidebarTitle: "Simulation & Preflight"
-description: "A deterministic sandbox lets agents test strategies against replayed mainnet state before deploying real capital. Pre-built scenarios, custom scenario authoring, backtesting, and multi-agent simulation."
 keywords: ['simulation', pre'flight, 'sandbox', 'backtesting', 'mainnet replay', 'agent testing', 'price swings', 'liquidation cascade', 'multi-agent']
 ai_summary: "Z's simulation environment is deterministic — not a testnet. Replays mainnet state against controlled scenarios. Pre-built scenarios: price swings, liquidation cascades, adversarial competing agents, gas spikes, policy violations/shell revocations. Custom scenario authoring via config files (initial state, price feeds, agent actions, failure injections). Backtesting: replay strategy against historical mainnet state. Multi-agent simulation: test behavior when competing agents are present. Run via CLI. Scenarios are deterministic so test failures are reproducible."
 ---

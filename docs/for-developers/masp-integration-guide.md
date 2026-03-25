@@ -1,7 +1,6 @@
 ---
 title: "MASP Integration Guide"
 sidebarTitle: "MASP Integration Guide"
-description: "How to build a contract or application that integrates with the ShieldedPool. The MASP interface, note model, broadcaster pattern, and common integration paths."
 keywords: ['MASP', 'integration', 'shield', 'transact', 'unshield', 'commitments', 'broadcaster', 'ShieldedPool', 'developer']
 ai_summary: "MASP integration conceptual guide. Three integration depths: (1) Read-only — query MASP state (Merkle root, nullifier set) from any contract. (2) User-facing app — use the broadcaster pattern and ZK proofs generated client-side. (3) ZApp with private execution — implement RelayAdapter for atomic unshield+execute+reshield. MASP holds UTXO-based notes. Commitment = Poseidon(Poseidon(npk, tokenHash, value), random, 0). Nullifier = Poseidon(nsk, leafIndex). Spending a note publishes its nullifier. New notes are inserted as commitments. 128-root Merkle history buffer prevents race conditions. Broadcaster pattern: user generates ZK proof, sends to broadcaster, broadcaster pays gas."
 ---

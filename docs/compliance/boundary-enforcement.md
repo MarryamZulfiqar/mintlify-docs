@@ -1,6 +1,5 @@
 ---
 title: "Boundary Enforcement"
-description: "Technical reference for Z's MASP entry and exit screening — the ASPManager contract, deposit screening logic, withdrawal screening, and the Privacy Pools (AssociationSetProver) compliance mechanism."
 keywords: ['boundary enforcement', 'ASP', 'ASPManager', 'DepositScreener', 'AssociationSetProver', 'Privacy Pools', 'OFAC', 'sanctions', 'compliance']
 ai_summary: "Z boundary enforcement at the contract level. ASPManager: registers ASPs, staleness threshold default 24h, iterates all active ASPs for each screening check. Screening logic: for each active ASP check isApproved(wallet) AND check lastUpdated within staleness threshold, reject if either fails. DepositScreener: integrates ASPManager into MASP deposit flow. AssociationSetProver: Privacy Pools. ASPs publish Merkle roots of compliant deposit sets. Users generate ZK proof of membership — proves deposit is in a compliant group without revealing which deposit. Supports multiple ASPs, each with multiple association sets. Sets versioned with historical root tracking. Deactivating a set preserves existing proofs. 48h timelock on all contract modifications, two-step ownership transfer."
 ---

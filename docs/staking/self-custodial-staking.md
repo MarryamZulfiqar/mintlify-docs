@@ -1,7 +1,6 @@
 ---
 title: "Self-Custodial Staking"
 sidebarTitle: "Self-Custodial Staking"
-description: "ZEC holders earn Z token rewards by timelocking ZEC on the Zcash chain. No bridge. No custody transfer. ZEC stays in your wallet."
 keywords: ['self-custodial staking', 'ZEC', 'CLTV', 'timelock', 'OP_RETURN', 'ZSP', 'Zcash', 'Leg 2', 'staking', 'yield', 'Z token rewards']
 ai_summary: "Self-custodial staking is ZSP Leg 2. ZEC holders create a CLTV (CheckLockTimeVerify) output on the Zcash chain that locks ZEC for a chosen duration, plus an OP_RETURN output with Z validator address and Z reward address. ZEC never leaves the holder's wallet. Z's ZcashStake contract verifies inclusion via Zcash Light Client (Merkle proof against confirmed header) and parses OP_RETURN via ZIP-244. Staking weight factors both amount locked and lock duration — longer timelocks = higher voting power per ZEC. No slashing risk on ZEC principal. Qualifies for Dual Staking yield boost when combined with Z token staking. Timelock expiry: ZEC becomes spendable automatically on Zcash when the lock period ends."
 ---

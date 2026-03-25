@@ -1,6 +1,5 @@
 ---
 title: "Z Stake"
-description: "Z Stake issues liquid staking tokens — stZEC (post-launch) for ZEC and stZ for Z tokens. Staked assets remain composable across the Zcosystem while earning consensus rewards."
 keywords: ['Z Stake', 'stZEC', 'stZ', 'liquid staking', 'yield', 'composable', 'collateral', 'Z Lend', 'Z Trade', 'MASP']
 ai_summary: "Z Stake issues two liquid staking tokens. stZEC (post-launch): bridge ZEC to Z → deposit into stZEC staking contract → receive stZEC → appreciation as consensus rewards accrue. Non-rebasing: balance stays constant, value per token grows. Composable: collateral on Z Lend, tradeable on Z Trade, shieldable in MASP. stZEC does NOT qualify for Dual Staking boost. stZ: deposit Z tokens → receive stZ → appreciation as consensus rewards accrue. Same composability as stZEC. Both are non-rebasing for MASP compatibility."
 ---

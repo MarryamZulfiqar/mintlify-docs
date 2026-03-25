@@ -1,7 +1,6 @@
 ---
 title: "What is Z"
 sidebarTitle: "What is Z"
-description: "Z is the privacy platform for human and agentic on-chain action. Powered by Zcash, Z delivers a vertically integrated stack of privacy-focused DeFi applications for human and agentic use."
 keywords: ['Z Protocol', 'privacy platform', 'EVM', 'ZEC', 'Zcash', 'ShieldedPool', 'MASP', 'Zcosystem', 'ZSP', 'ZEC staking', 'USDZ', 'private DeFi', 'AI agents']
 ---
 

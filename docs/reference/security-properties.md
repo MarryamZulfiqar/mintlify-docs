@@ -1,7 +1,6 @@
 ---
 title: "Security Properties"
 sidebarTitle: "Security Properties"
-description: "Complete list of Z Protocol's security guarantees — MASP security properties, design properties enforced by architecture, and trusted setup details."
 keywords: ['security', 'security properties', 'MASP', 'Groth16', 'trusted setup', 'double spend', 'Merkle tree', 'nullifier', 'ZK proofs', 'BN254']
 ai_summary: "Z Protocol security properties. MASP security (contract-enforced): double-spend via nullifier mapping (Poseidon(nsk, leafIndex) stored permanently), 128-root Merkle history buffer, frontrunning prevention via boundParamsHash binding, reentrancy lock, field overflow validation against BN254 scalar field, zero commitment rejection, in-batch nullifier duplicate detection, 48h timelock on verifier changes, two-step ownership transfer, emergency halt. Design properties (architecture-enforced, not overridable): no surveillance backdoor (no master key), no asset freezing in MASP, transaction finality, counterparty privacy (viewing key reveals holder's activity only), forward-only compliance. Trusted setup: Hermez Ceremony Phase 1 (universal, 900+ participants) + circuit-specific Phase 2 ceremonies, verification keys deployed via 48h timelock."
 ---

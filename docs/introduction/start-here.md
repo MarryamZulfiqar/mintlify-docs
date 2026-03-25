@@ -1,7 +1,6 @@
 ---
 title: "Start Here"
 sidebarTitle: "Getting Started"
-description: "Find your path into Z Protocol documentation. Six audience tracks, each pointing to the right starting pages."
 keywords: ['start here', 'getting started', 'audience', 'ZEC holder', 'DeFi user', 'developer', 'AI agent', 'miner', 'validator']
 ai_summary: "Audience routing page for Z Protocol docs. Six tracks: (1) ZEC holder — ZEC staking overview, self-custodial staking, liquid staking; (2) DeFi user — Zcosystem, USDZ, Z Trade, Z Lend; (3) Developer/builder — Developer Quick Start, EVM compatibility; (4) AI agent builder — For Agents section, AI tooling setup; (5) Zcash miner — ZSP consensus Leg 1, ZEC staking overview; (6) Validator candidate — ZSP consensus validator election section."
 ---
