@@ -1,10 +1,9 @@
 ---
 title: "The Zcosystem"
 sidebarTitle: "The Zcosystem"
-description: Z's application layer — a coordinated set of DeFi primitives integrated with the MASP at the protocol level. Z Trade, Z Lend, Z Stake, USDZ, yUSDZ, and how they compose.
-keywords: [Zcosystem, ZApps, Z Trade, Z Lend, Z Stake, USDZ, yUSDZ, RelayAdapter, DeFi composition, private DEX, private lending, vertical integration, concentrated liquidity]
-ai_summary: >-
-   The Zcosystem is Z's vertically integrated DeFi application layer. Z Trade: Uniswap v3 fork, concentrated liquidity, MASP integration via RelayAdapter (atomic unshield → execute → reshield). adaptParams binding = keccak256(nullifiers, commitments, actionData). Primary pairs: ZEC/USDZ, Z/USDZ, stZEC/USDZ, stZ/USDZ. 50% protocol fee on USDZ trading pairs. Z Lend: Aave fork, MASP integration via RelayAdapter. Collateral: ZEC, stZEC, Z, stZ, USDZ, yUSDZ. Reserve factor model (majority to depositors). Z Stake: issues stZEC (post-launch) and stZ. USDZ: 1:1 USDC/USDT stablecoin. yUSDZ: ERC-4626 yield vault, non-rebasing. DeFi composition: stake ZEC into stZEC → deposit as collateral → borrow USDZ → deposit into yUSDZ → shield everything. Vertical integration rationale: agent predictability, privacy design coordination, internal revenue compounding, AI makes it practical.
+description: "Z's application layer — a coordinated set of DeFi primitives integrated with the MASP at the protocol level. Z Trade, Z Lend, Z Stake, USDZ, yUSDZ, and how they compose."
+keywords: ['Zcosystem', 'ZApps', 'Z Trade', 'Z Lend', 'Z Stake', 'USDZ', 'yUSDZ', 'RelayAdapter', 'DeFi composition', 'private DEX', 'private lending', 'vertical integration', 'concentrated liquidity']
+ai_summary: "The Zcosystem is Z's vertically integrated DeFi application layer. Z Trade: Uniswap v3 fork, concentrated liquidity, MASP integration via RelayAdapter (atomic unshield → execute → reshield). adaptParams binding = keccak256(nullifiers, commitments, actionData). Primary pairs: ZEC/USDZ, Z/USDZ, stZEC/USDZ, stZ/USDZ. 50% protocol fee on USDZ trading pairs. Z Lend: Aave fork, MASP integration via RelayAdapter. Collateral: ZEC, stZEC, Z, stZ, USDZ, yUSDZ. Reserve factor model (majority to depositors). Z Stake: issues stZEC (post-launch) and stZ. USDZ: 1:1 USDC/USDT stablecoin. yUSDZ: ERC-4626 yield vault, non-rebasing. DeFi composition: stake ZEC into stZEC → deposit as collateral → borrow USDZ → deposit into yUSDZ → shield everything. Vertical integration rationale: agent predictability, privacy design coordination, internal revenue compounding, AI makes it practical."
 ---
 
 # The Zcosystem
@@ -56,7 +55,7 @@ Z Lend generates protocol revenue through a reserve factor on borrow interest, f
 
 ### Sample use case
 
-Deposit stZEC as collateral. Borrow USDZ. Maintain ZEC price exposure and earn staking yield (if using stZEC) while accessing private stablecoins. This is the composition path described in [Liquid Staking](../staking/liquid-staking.md).
+Deposit stZEC as collateral. Borrow USDZ. Maintain ZEC price exposure and earn staking yield (if using stZEC) while accessing private stablecoins. This is the composition path described in [Liquid Staking](/docs/staking/liquid-staking).
 
 ---
 
@@ -68,7 +67,7 @@ The staking application for the Zcosystem. Z Stake issues liquid staking tokens 
 
 **stZ** is the same concept for the Z token. Stake Z, receive stZ, earn consensus rewards. stZ maintains DeFi composability while the underlying Z participates in consensus.
 
-For the full liquid staking architecture, see [Liquid Staking](../staking/liquid-staking.md).
+For the full liquid staking architecture, see [Liquid Staking](/docs/staking/liquid-staking).
 
 ---
 
@@ -78,7 +77,7 @@ Privacy-preserving stablecoin backed 1:1 by USDC and USDT.
 
 Deposit USDC or USDT into the USDZ mint contract on the source chain. Receive USDZ on Z. USDZ can be deposited into yUSDZ to earn yield, used as collateral on Z Lend, traded on Z Trade, or shielded in the MASP.
 
-For the full USDZ architecture, see [USDZ](../products/usdz.md).
+For the full USDZ architecture, see [USDZ](/docs/products/usdz).
 
 ---
 
@@ -86,7 +85,7 @@ For the full USDZ architecture, see [USDZ](../products/usdz.md).
 
 A yield-bearing stablecoin token. Users deposit USDZ into an ERC-4626 vault and receive yUSDZ, which appreciates as yield accrues. Yield sourcing is to be determined.
 
-For the full yUSDZ architecture, see [yUSDZ](../products/yusdz.md).
+For the full yUSDZ architecture, see [yUSDZ](/docs/products/yusdz).
 
 ---
 

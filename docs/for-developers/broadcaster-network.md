@@ -1,8 +1,9 @@
 ---
-title: Broadcaster Network
-description: Broadcasters submit MASP transactions on behalf of users, abstracting the sender's address from the chain. How the broadcaster pattern works, frontrunning prevention, and the fallback path.
-keywords: [broadcaster, gas abstraction, privacy, MASP, fee, frontrunning, boundParamsHash, permissionless]
-ai_summary: Broadcasters are permissionless participants that submit MASP transactions on behalf of users. Without broadcasters, submitting a MASP transaction would reveal the user's address as msg.sender, creating a privacy leak. Flow: user generates ZK proof + signs transaction params offline → sends to broadcaster → broadcaster verifies proof locally → submits on-chain → broadcaster compensated via fee deducted from user's shielded note atomically within the MASP transaction. Frontrunning prevention: boundParamsHash = keccak256(recipient, token, amount, fee, broadcaster) % FIELD included in ZK proof's public inputs — broadcaster cannot modify parameters without invalidating proof. Broadcaster role is permissionless. Fallback: user can self-broadcast (submitting directly), sacrificing sender address privacy.
+title: "Broadcaster Network"
+sidebarTitle: "Broadcaster Network"
+description: "Broadcasters submit MASP transactions on behalf of users, abstracting the sender's address from the chain. How the broadcaster pattern works, frontrunning prevention, and the fallback path."
+keywords: ['broadcaster',' gas abstraction', 'privacy', 'MASP', 'fee', 'frontunnring', 'boundParamsHash', 'permissionless']
+ai_summary: "Broadcasters are permissionless participants that submit MASP transactions on behalf of users. Without broadcasters, submitting a MASP transaction would reveal the user's address as msg.sender, creating a privacy leak. Flow: user generates ZK proof + signs transaction params offline → sends to broadcaster → broadcaster verifies proof locally → submits on-chain → broadcaster compensated via fee deducted from user's shielded note atomically within the MASP transaction. Frontrunning prevention: boundParamsHash = keccak256(recipient, token, amount, fee, broadcaster) % FIELD included in ZK proof's public inputs — broadcaster cannot modify parameters without invalidating proof. Broadcaster role is permissionless. Fallback: user can self-broadcast (submitting directly), sacrificing sender address privacy."
 ---
 
 # Broadcaster Network

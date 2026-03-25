@@ -1,8 +1,8 @@
 ---
-title: Z Stake
-description: Z Stake issues liquid staking tokens — stZEC (post-launch) for ZEC and stZ for Z tokens. Staked assets remain composable across the Zcosystem while earning consensus rewards.
-keywords: [Z Stake, stZEC, stZ, liquid staking, yield, composable, collateral, Z Lend, Z Trade, MASP]
-ai_summary: Z Stake issues two liquid staking tokens. stZEC (post-launch): bridge ZEC to Z → deposit into stZEC staking contract → receive stZEC → appreciation as consensus rewards accrue. Non-rebasing: balance stays constant, value per token grows. Composable: collateral on Z Lend, tradeable on Z Trade, shieldable in MASP. stZEC does NOT qualify for Dual Staking boost. stZ: deposit Z tokens → receive stZ → appreciation as consensus rewards accrue. Same composability as stZEC. Both are non-rebasing for MASP compatibility.
+title: "Z Stake"
+description: "Z Stake issues liquid staking tokens — stZEC (post-launch) for ZEC and stZ for Z tokens. Staked assets remain composable across the Zcosystem while earning consensus rewards."
+keywords: ['Z Stake', 'stZEC', 'stZ', 'liquid staking', 'yield', 'composable', 'collateral', 'Z Lend', 'Z Trade', 'MASP']
+ai_summary: "Z Stake issues two liquid staking tokens. stZEC (post-launch): bridge ZEC to Z → deposit into stZEC staking contract → receive stZEC → appreciation as consensus rewards accrue. Non-rebasing: balance stays constant, value per token grows. Composable: collateral on Z Lend, tradeable on Z Trade, shieldable in MASP. stZEC does NOT qualify for Dual Staking boost. stZ: deposit Z tokens → receive stZ → appreciation as consensus rewards accrue. Same composability as stZEC. Both are non-rebasing for MASP compatibility."
 ---
 
 # Z Stake
@@ -30,7 +30,7 @@ stZEC uses a non-rebasing share price model: your token balance stays constant, 
 - Shield in the MASP as private notes
 - Maintain liquidity — unlike timelocked ZEC, stZEC is transferable
 
-**Note:** stZEC does not qualify for the Dual Staking yield boost. Only self-custodial ZEC (CLTV timelock on the Zcash chain) qualifies. See [Dual Staking](../staking/dual-staking.md).
+**Note:** stZEC does not qualify for the Dual Staking yield boost. Only self-custodial ZEC (CLTV timelock on the Zcash chain) qualifies. See [Dual Staking](/docs/staking/dual-staking).
 
 ### stZEC vs. self-custodial staking
 

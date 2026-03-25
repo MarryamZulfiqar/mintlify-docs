@@ -1,7 +1,7 @@
 ---
 title: "The Z Token"
 description: "The Z token is the governance and value-capture token for Z Protocol. Gas, staking, governance, and value accrual from Zcosystem activity."
-keywords: ["Z token", "governance", "gas", "staking", "value accrual", "consensus", "Dual Staking", "ZSP", "fixed supply", "Paymaster"]
+keywords: ['Z token', 'governance', 'gas', 'staking', 'value accrual', 'consensus', 'Dual Staking', 'ZSP', 'fixed supply', 'Paymaster']
 ai_summary: "Z token has fixed supply of 1 billion. Four utilities: (1) Gas — primary gas token of Z; ZEC accepted via ERC-4337 Paymaster, conversion transparent. (2) Staking/Consensus — Z token stakers are Leg 3 of ZSP, receive 2/3 of total consensus emissions. Dual Staking (Z + self-custodial ZEC simultaneously) earns boosted rewards. (3) Governance — parameter changes, validator policy, emission schedule. (4) Value accrual — revenue from Zcosystem applications accrues to Z holders. Distribution details TBD."
 sidebarTitle: "The Z Token"
 ---
@@ -26,9 +26,9 @@ ZEC holders can access all core applications without touching the Z token. When 
 
 Z token stakers are one of the three legs of ZSP consensus. By delegating Z tokens to validators, holders help secure the network and earn consensus rewards. Z stakers receive the largest share of consensus emissions: 2/3 of total.
 
-Staking Z tokens alongside ZEC through [Dual Staking](../staking/dual-staking.md) earns boosted rewards.
+Staking Z tokens alongside ZEC through [Dual Staking](/docs/staking/dual-staking) earns boosted rewards.
 
-For how staking works mechanically, see [Zcash Satoshi Plus](./zcash-satoshi-plus.md). For liquid staking tokens, see [Liquid Staking](../staking/liquid-staking.md).
+For how staking works mechanically, see [Zcash Satoshi Plus](/docs/core-concepts/zcash-satoshi-plus). For liquid staking tokens, see [Liquid Staking](/docs/staking/liquid-staking).
 
 ### Governance
 

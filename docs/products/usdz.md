@@ -1,8 +1,8 @@
 ---
-title: USDZ
-description: USDZ is Z's stablecoin — pegged 1:1 to the US dollar, fully backed by USDC and USDT, and mints directly into the MASP as private notes.
-keywords: [USDZ, stablecoin, private stablecoin, USDC, USDT, LayerZero, shielded minting, Poseidon commitment, peg stability]
-ai_summary: USDZ is 1:1 USDC/USDT backed stablecoin on Z. Two minting paths: (1) Shielded — user generates Poseidon commitment off-chain, only commitment crosses LayerZero bridge (not recipient address), USDZ minted into ShieldedMinter vault, user claims via nullifier derivation proof — source chain deposit and Z balance are unlinkable; (2) Direct — standard bridge, USDZ minted to plaintext address. Redemption: burn USDZ on Z → LayerZero message → USDC/USDT released from source chain vault. Peg stability: 1:1 backing + dynamic redemption fees if velocity spikes + rate limiting on large redemptions. Source chains: Ethereum, Arbitrum, Base. LayerZero v2, three message types: 0x01 shielded mint, 0x03 direct mint, 0x02 burn+unlock.
+title: "USDZ"
+description: "USDZ is Z's stablecoin — pegged 1:1 to the US dollar, fully backed by USDC and USDT, and mints directly into the MASP as private notes."
+keywords: ['USDZ', st'a'blecoin, 'private stablecoin', 'USDC', 'USDT', 'LayerZero', 'shielded minting', 'Poseidon commitment', 'peg stability']
+ai_summary: "USDZ is 1:1 USDC/USDT backed stablecoin on Z. Two minting paths: (1) Shielded — user generates Poseidon commitment off-chain, only commitment crosses LayerZero bridge (not recipient address), USDZ minted into ShieldedMinter vault, user claims via nullifier derivation proof — source chain deposit and Z balance are unlinkable; (2) Direct — standard bridge, USDZ minted to plaintext address. Redemption: burn USDZ on Z → LayerZero message → USDC/USDT released from source chain vault. Peg stability: 1:1 backing + dynamic redemption fees if velocity spikes + rate limiting on large redemptions. Source chains: Ethereum, Arbitrum, Base. LayerZero v2, three message types: 0x01 shielded mint, 0x03 direct mint, 0x02 burn+unlock."
 ---
 
 # USDZ

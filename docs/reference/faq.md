@@ -1,8 +1,9 @@
 ---
-title: FAQ
-description: Common questions about Z Protocol, organized by topic.
-keywords: [FAQ, frequently asked questions, Z Protocol, privacy, ZEC, staking, USDZ, Z token, EVM, ZSP, agents]
-ai_summary: Frequently asked questions about Z Protocol. General: what is Z, relation to Zcash (powered by, not L2), relation to Core (ZSP inspired by Satoshi Plus), architecture (independent protocol with own consensus/validator set/token). Privacy: not everything private (in-pool = shielded, DeFi via stealth = unlinkable), not privacy by default (opt-in), compliance via viewing keys + Privacy Pools, ZK proofs not encryption, difference from Monero (ZK-SNARKs vs ring signatures), difference from Aztec (EVM not Noir, not L2, enshrined DeFi). ZEC: use without Z token (yes, gas payable in ZEC), earn yield multiple ways, self-custodial staking keeps ZEC in wallet, miners participate with no changes. USDZ: 1:1 USDC/USDT backed, yUSDZ is yield-bearing version. Z token: gas + staking + governance + value accrual, 1B fixed supply. Technical: EVM compatible, ZSP consensus, SPV bridge.
+title: "FAQ"
+sidebarTitle: "FAQs"
+description: "Common questions about Z Protocol, organized by topic."
+keywords: ['FAQ', 'frequently asked questions', 'Z Protocol', 'privacy', 'ZEC', 'staking', 'USDZ', 'Z token', 'EVM', 'ZSP', 'agents']
+ai_summary: "Frequently asked questions about Z Protocol. General: what is Z, relation to Zcash (powered by, not L2), relation to Core (ZSP inspired by Satoshi Plus), architecture (independent protocol with own consensus/validator set/token). Privacy: not everything private (in-pool = shielded, DeFi via stealth = unlinkable), not privacy by default (opt-in), compliance via viewing keys + Privacy Pools, ZK proofs not encryption, difference from Monero (ZK-SNARKs vs ring signatures), difference from Aztec (EVM not Noir, not L2, enshrined DeFi). ZEC: use without Z token (yes, gas payable in ZEC), earn yield multiple ways, self-custodial staking keeps ZEC in wallet, miners participate with no changes. USDZ: 1:1 USDC/USDT backed, yUSDZ is yield-bearing version. Z token: gas + staking + governance + value accrual, 1B fixed supply. Technical: EVM compatible, ZSP consensus, SPV bridge."
 ---
 
 # FAQ
@@ -15,7 +16,7 @@ Common questions about Z Protocol, organized by topic.
 
 **What is Z?**
 
-Z is the privacy platform for human and agentic on-chain action. It delivers a vertically integrated stack of privacy-focused applications: private lending, borrowing, trading, stablecoins, yield, and agent infrastructure. See [What is Z](../introduction/what-is-z.md).
+Z is the privacy platform for human and agentic on-chain action. It delivers a vertically integrated stack of privacy-focused applications: private lending, borrowing, trading, stablecoins, yield, and agent infrastructure. See [What is Z](/docs/introduction/what-is-z).
 
 **How is Z related to Zcash?**
 
@@ -39,7 +40,7 @@ Z is led by Zed, an anonymous founder. Rich Rines (Core contributor) provides st
 
 **Is everything on Z private?**
 
-The privacy level depends on what you're doing. Inside the ShieldedPool, balances and transfers are fully shielded — essentially invisible. When you access the Zcosystem (Z Trade, Z Lend, etc.), you use a fresh stealth address that can't be linked to your identity. The transaction is visible but the actor isn't (unlinkable). See [Privacy Architecture](../core-concepts/privacy-architecture.md).
+The privacy level depends on what you're doing. Inside the ShieldedPool, balances and transfers are fully shielded — essentially invisible. When you access the Zcosystem (Z Trade, Z Lend, etc.), you use a fresh stealth address that can't be linked to your identity. The transaction is visible but the actor isn't (unlinkable). See [Privacy Architecture](/docs/core-concepts/privacy-architecture).
 
 **Is Z "privacy by default"?**
 
@@ -47,7 +48,7 @@ No. Privacy is a native option, not forced on every transaction. Users choose wh
 
 **How does Z handle regulatory compliance?**
 
-Through selective disclosure. Viewing keys let account holders share transaction history with auditors or regulators without revealing spending authority. Privacy Pools let users prove their funds are clean without deanonymizing. See [Privacy & Compliance](../compliance/privacy-and-compliance.md).
+Through selective disclosure. Viewing keys let account holders share transaction history with auditors or regulators without revealing spending authority. Privacy Pools let users prove their funds are clean without deanonymizing. See [Privacy & Compliance](/docs/compliance/privacy-and-compliance).
 
 **How is Z's privacy different from Monero?**
 
@@ -72,7 +73,7 @@ Multiple ways:
 2. Bridge ZEC to Z and stake into stZEC for liquid staking yield (post-launch)
 3. Use stZEC as collateral on Z Lend to borrow USDZ
 
-See [ZEC Staking Overview](../staking/zec-staking-overview.md).
+See [ZEC Staking Overview](/docs/staking/zec-staking-overview).
 
 **Does my ZEC leave my wallet with self-custodial staking?**
 
@@ -92,7 +93,7 @@ USDC and USDT, 1:1. Every USDZ is fully backed by real stablecoins held in reser
 
 **What is yUSDZ?**
 
-The yield-bearing version of USDZ. Deposit USDZ, receive yUSDZ, earn yield automatically. yUSDZ uses a non-rebasing share price model — your token balance stays constant and the value per token grows. See [yUSDZ](../products/yusdz.md).
+The yield-bearing version of USDZ. Deposit USDZ, receive yUSDZ, earn yield automatically. yUSDZ uses a non-rebasing share price model — your token balance stays constant and the value per token grows. See [yUSDZ](/docs/products/yusdz).
 
 **Can USDZ lose its peg?**
 
@@ -104,7 +105,7 @@ USDZ is designed with circuit breakers: dynamic fees if redemption velocity spik
 
 **What is the Z token for?**
 
-Gas payments, staking (one of ZSP's three consensus legs), governance, and value capture. Revenue from the Zcosystem accrues to Z token holders. Distribution details are to be determined. See [The Z Token](../core-concepts/the-z-token.md).
+Gas payments, staking (one of ZSP's three consensus legs), governance, and value capture. Revenue from the Zcosystem accrues to Z token holders. Distribution details are to be determined. See [The Z Token](/docs/core-concepts/the-z-token).
 
 **What's the token supply?**
 
@@ -116,15 +117,15 @@ Gas payments, staking (one of ZSP's three consensus legs), governance, and value
 
 **Is Z EVM-compatible?**
 
-Yes. Solidity smart contracts work on Z. Any Ethereum developer can build on Z without learning a new language. See [EVM Compatibility](../developers/evm-compatibility.md).
+Yes. Solidity smart contracts work on Z. Any Ethereum developer can build on Z without learning a new language. See [EVM Compatibility](/docs/for-developers/evm-compatibility).
 
 **What consensus does Z use?**
 
-Zcash Satoshi Plus (ZSP): a hybrid mechanism combining ZEC mining delegation, self-custodial ZEC staking, and Z token staking. Adapted from Core's Satoshi Plus. See [Zcash Satoshi Plus](../core-concepts/zcash-satoshi-plus.md).
+Zcash Satoshi Plus (ZSP): a hybrid mechanism combining ZEC mining delegation, self-custodial ZEC staking, and Z token staking. Adapted from Core's Satoshi Plus. See [Zcash Satoshi Plus](/docs/core-concepts/zcash-satoshi-plus).
 
 **How does the ZEC bridge work?**
 
-SPV-verified deposits. Your ZEC deposit on the Zcash chain is verified cryptographically — not by a custodian — and corresponding ZEC notes are minted directly into Z's ShieldedPool. See [Z Bridge](../products/z-bridge.md).
+SPV-verified deposits. Your ZEC deposit on the Zcash chain is verified cryptographically — not by a custodian — and corresponding ZEC notes are minted directly into Z's ShieldedPool. See [Z Bridge](/docs/products/z-bridge).
 
 ---
 
@@ -132,8 +133,8 @@ SPV-verified deposits. Your ZEC deposit on the Zcash chain is verified cryptogra
 
 **Why are ZApps built in-house instead of funded externally?**
 
-Privacy integration requires protocol-level access to the ShieldedPool that external teams cannot achieve with the same depth. Vertical integration also means all revenue flows to the protocol rather than leaking to third-party tokens. AI has collapsed the cost of shipping quality software, making a small team building the full stack practical. See [The Zcosystem](../core-concepts/the-zcosystem.md).
+Privacy integration requires protocol-level access to the ShieldedPool that external teams cannot achieve with the same depth. Vertical integration also means all revenue flows to the protocol rather than leaking to third-party tokens. AI has collapsed the cost of shipping quality software, making a small team building the full stack practical. See [The Zcosystem](/docs/core-concepts/the-zcosystem).
 
 **What about AI agents?**
 
-Z is designed as infrastructure for AI agents. Agents need privacy more than humans — thousands of transactions create massive metadata surfaces. Z provides agent wallets (Shells), protocol-level wallet hygiene via MASP + stealth addresses, MCP integrations with major frameworks, and simulation environments. See [Z for AI Agents](../for-agents/z-for-ai-agents.md).
+Z is designed as infrastructure for AI agents. Agents need privacy more than humans — thousands of transactions create massive metadata surfaces. Z provides agent wallets (Shells), protocol-level wallet hygiene via MASP + stealth addresses, MCP integrations with major frameworks, and simulation environments. See [Z for AI Agents](/docs/for-agents/z-for-ai-agents).

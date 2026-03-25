@@ -1,8 +1,8 @@
 ---
 title: Z Lend
-description: Z's enshrined lending and borrowing protocol. Deposit collateral privately and borrow USDZ. Maintains ZEC price exposure while accessing private stablecoins.
-keywords: [Z Lend, lending, borrowing, private lending, USDZ, stZEC, collateral, Aave, RelayAdapter, liquidation]
-ai_summary: Z Lend is an Aave-model lending protocol enshrined on Z with MASP integration via RelayAdapter. Supported collateral: ZEC, stZEC, Z, stZ, USDZ, yUSDZ. Borrow USDZ against collateral. Privacy via RelayAdapter (same atomic unshield+execute+reshield as Z Trade). Revenue model: Aave-style reserve factor — majority of borrow interest to depositors, protocol captures spread. Primary use case: deposit stZEC as collateral, borrow USDZ, maintain ZEC price exposure + staking yield while accessing private stablecoins. Liquidation follows standard health factor mechanics.
+description: "Z's enshrined lending and borrowing protocol. Deposit collateral privately and borrow USDZ. Maintains ZEC price exposure while accessing private stablecoins."
+keywords: ['Z Lend', 'lending', 'borrowing', 'private lending', 'USDZ', 'stZEC', 'collateral', 'Aave', 'RelayAdapter', 'liquidation']
+ai_summary: "Z Lend is an Aave-model lending protocol enshrined on Z with MASP integration via RelayAdapter. Supported collateral: ZEC, stZEC, Z, stZ, USDZ, yUSDZ. Borrow USDZ against collateral. Privacy via RelayAdapter (same atomic unshield+execute+reshield as Z Trade). Revenue model: Aave-style reserve factor — majority of borrow interest to depositors, protocol captures spread. Primary use case: deposit stZEC as collateral, borrow USDZ, maintain ZEC price exposure + staking yield while accessing private stablecoins. Liquidation follows standard health factor mechanics."
 ---
 
 # Z Lend

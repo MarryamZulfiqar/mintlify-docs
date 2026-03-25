@@ -1,8 +1,8 @@
 ---
-title: SKILL.md Reference
-description: How to write and use SKILL.md files for Z applications. SKILL.md files are structured walkthroughs designed for LLM consumption — self-contained, deterministic structure, real values, inline references.
-keywords: [SKILL.md, agent documentation, LLM, structured walkthroughs, self-contained, agent tooling]
-ai_summary: SKILL.md files are structured documentation files designed for LLM/agent consumption. Four required properties: (1) Self-contained — no mid-flow external links, everything needed to complete the task on one page; (2) Deterministic structure — same format across every file (objective, prerequisites, steps, verification); (3) Real executable values — actual contract addresses and network parameters, no placeholder values; (4) Inline references — ABIs and addresses appear where they are used. Z ships SKILL.md files for all core operations. External developers write their own SKILL.md files using Z's template and format conventions.
+title: "SKILL.md Reference"
+description: "How to write and use SKILL.md files for Z applications. SKILL.md files are structured walkthroughs designed for LLM consumption — self-contained, deterministic structure, real values, inline references."
+keywords: ['SKILL.md', 'agent documentation', 'LLM', 'structured walkthroughs', 'self-contained', 'agent tooling']
+ai_summary: "SKILL.md files are structured documentation files designed for LLM/agent consumption. Four required properties: (1) Self-contained — no mid-flow external links, everything needed to complete the task on one page; (2) Deterministic structure — same format across every file (objective, prerequisites, steps, verification); (3) Real executable values — actual contract addresses and network parameters, no placeholder values; (4) Inline references — ABIs and addresses appear where they are used. Z ships SKILL.md files for all core operations. External developers write their own SKILL.md files using Z's template and format conventions."
 ---
 
 # SKILL.md Reference

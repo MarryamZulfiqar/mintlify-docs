@@ -1,8 +1,8 @@
 ---
-title: Privacy & Compliance
-description: Z's compliance model treats the MASP as a zone with controlled entry and exit. Entry screening via ASPs, Privacy Pools for withdrawal compliance, selective disclosure via viewing keys, and design properties that cannot be overridden.
-keywords: [compliance, OFAC, sanctions, ASP, Association Set Provider, Privacy Pools, selective disclosure, viewing key, boundary enforcement, exchange]
-ai_summary: Z's compliance model: private on-chain, regulated at the boundary. Entry: deposits screened against OFAC/sanctions lists via ASPs (Association Set Providers). ASPManager iterates all active ASPs, checks isApproved(wallet) and lastUpdated within staleness threshold (default 24h). Rejects if any ASP returns unapproved or stale. Withdrawal: recipient address screened against same ASP lists. Privacy Pools: AssociationSetProver — ASPs publish Merkle roots of compliant deposit sets, users generate ZK proof of membership (proves funds from screened group without revealing which deposit). Selective disclosure: viewing keys — read-only, time-scopable, user-controlled. For exchanges: scoped viewing key + Travel Rule (at exchange layer, not on-chain). Compliance oracle attestation (optional): user generates ZK proof against compliance circuit, oracle issues signed attestation, exchange accepts without raw viewing key. Emergency controls: 48h timelock on contract modifications, two-step ownership transfer.
+title: "Privacy & Compliance"
+description: "Z's compliance model treats the MASP as a zone with controlled entry and exit. Entry screening via ASPs, Privacy Pools for withdrawal compliance, selective disclosure via viewing keys, and design properties that cannot be overridden."
+keywords: ['compliance', 'OFAC', 'sanctions', 'ASP', 'Association Set Provider', 'Privacy Pools', 'selective disclosure', 'viewing key', 'boundary enforcement', 'exchange']
+ai_summary: "Z's compliance model: private on-chain, regulated at the boundary. Entry: deposits screened against OFAC/sanctions lists via ASPs (Association Set Providers). ASPManager iterates all active ASPs, checks isApproved(wallet) and lastUpdated within staleness threshold (default 24h). Rejects if any ASP returns unapproved or stale. Withdrawal: recipient address screened against same ASP lists. Privacy Pools: AssociationSetProver — ASPs publish Merkle roots of compliant deposit sets, users generate ZK proof of membership (proves funds from screened group without revealing which deposit). Selective disclosure: viewing keys — read-only, time-scopable, user-controlled. For exchanges: scoped viewing key + Travel Rule (at exchange layer, not on-chain). Compliance oracle attestation (optional): user generates ZK proof against compliance circuit, oracle issues signed attestation, exchange accepts without raw viewing key. Emergency controls: 48h timelock on contract modifications, two-step ownership transfer."
 ---
 
 # Privacy & Compliance
@@ -69,7 +69,7 @@ Users can share a viewing key with regulators, auditors, or counterparties to pr
 
 Viewing keys can be time-bounded. An owner sharing a key with a tax accountant can restrict it to a specific fiscal year. An owner responding to a legal inquiry can scope the key to the transactions in question. The scoped key proves the data is authentic — it derives from on-chain state, not from a user-constructed report.
 
-For the full viewing key reference, see [Selective Disclosure](./selective-disclosure.md).
+For the full viewing key reference, see [Selective Disclosure](/docs/compliance/selective-disclosure).
 
 ---
 

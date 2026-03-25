@@ -1,6 +1,8 @@
 ---
 title: "Privacy Architecture"
-sidebarTitle: "Privacy Architecture"
+description: "Z severs the connection between on-chain activity and identity through the Multi-Asset Shielded Pool and one-time stealth addresses. What's private, what's unlinkable, and how each mechanism works."
+keywords: ['MASP', 'ShieldedPool', 'stealth addresses', 'Groth16', 'BN254', 'ZK proofs', 'Poseidon', 'nullifier', 'commitment', 'viewing key', 'broadcaster', 'privacy model', 'unlinkable', 'shielded']
+ai_summary: "Z uses two privacy mechanisms. (1) MASP (Multi-Asset Shielded Pool): UTXO-based notes. Commitment = Poseidon(Poseidon(npk, tokenHash, value), random, 0). Nullifier = Poseidon(nsk, leafIndex). Merkle tree depth 16, 65,536 leaves, 128-root history buffer. Every MASP transaction includes Groth16 proof on BN254 (~250k gas to verify). (2) Stealth addresses: DeFi exits use fresh ECDH one-time addresses (ERC-5564). Activity visible but unlinkable to identity or pool balance. Broadcaster network: user submits signed proof to broadcaster who pays gas — user address never appears as msg.sender. boundParamsHash = keccak256(recipient, token, amount, fee, broadcaster) % FIELD. Key hierarchy: spendingKey = Poseidon(masterKey, 0), nsk = Poseidon(spendingKey, 0), npk = Poseidon(nsk), viewingKey = Poseidon(masterKey, 1). Groth16 trusted setup: Hermez Ceremony Phase 1 + circuit-specific Phase 2. Verification keys deployed via 48-hour timelock."
 ---
 
 # Privacy Architecture
@@ -16,7 +18,7 @@ Z's privacy architecture is designed to deepen over time. Future phases introduc
 ## Privacy levels
 
 | Action | Privacy level | What an observer sees |
-| --- | --- | --- |
+|--------|--------------|----------------------|
 | Holding assets in the MASP | Fully shielded | Nothing. Balances are cryptographic commitments. No address-to-balance mapping exists. |
 | Transferring inside the MASP | Fully shielded | That MASP transactions occurred (count and timing). Not who sent to whom, how much, or which asset. |
 | In-pool swaps (future) | Fully shielded | Nothing about the trade. Notes swap atomically inside the pool with zero public footprint. |
@@ -38,7 +40,7 @@ When assets enter the MASP, the system creates a private ownership record called
 
 Only a one-way mathematical fingerprint of this note — a commitment — is stored on the blockchain. The commitment is computed using Poseidon hashing:
 
-```text
+```
 innerHash  = Poseidon(npk, tokenHash, value)
 commitment = Poseidon(innerHash, random, 0)
 ```
@@ -120,7 +122,7 @@ The broadcaster role is permissionless. Anyone can operate as a broadcaster. A c
 
 **Frontrunning prevention.** Each proof is bound to specific external parameters:
 
-```text
+```
 boundParamsHash = keccak256(recipient, token, amount, fee, broadcaster) % FIELD
 ```
 
@@ -132,7 +134,7 @@ This binding is included in the ZK proof's public inputs. A broadcaster cannot c
 
 A single master key derives all the keys a user needs:
 
-```text
+```
 masterKey (random 256-bit)
   |
   +-- spendingKey = Poseidon(masterKey, 0)
@@ -156,7 +158,7 @@ Users can share a viewing key with regulators, auditors, or counterparties to pr
 
 **A viewing key cannot:** spend funds, view other users' activity, modify or selectively omit transactions within its scope.
 
-This is functionally similar to a bank providing account statements to a regulator: per-user visibility without requiring the entire system's records to be public. For the full compliance architecture, see [Privacy & Compliance](../compliance/privacy-and-compliance.md).
+This is functionally similar to a bank providing account statements to a regulator: per-user visibility without requiring the entire system's records to be public. For the full compliance architecture, see [Privacy & Compliance](/docs/compliance/privacy-and-compliance).
 
 ---
 
@@ -179,7 +181,7 @@ Groth16 requires a trusted setup ceremony. Z follows a two-phase approach:
 ## Security properties
 
 | Property | How it is enforced |
-| --- | --- |
+|----------|-------------------|
 | Double-spend prevention | Nullifier mapping. Once published, a nullifier permanently marks a note as spent. |
 | Merkle root staleness | 128-root history buffer accepts any recent root, preventing race conditions. |
 | Frontrunning protection | boundParamsHash binds proofs to specific recipients, fees, and broadcasters. |
