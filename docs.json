@@ -24,10 +24,10 @@
       {
         "group": "Core Concepts",
         "pages": [
-          "docs/core-concepts/privacy-architecture",
           "docs/core-concepts/zcash-satoshi-plus",
+          "docs/core-concepts/the-z-token",
           "docs/core-concepts/the-zcosystem",
-          "docs/core-concepts/the-z-token"
+          "docs/core-concepts/privacy-architecture"
         ]
       },
       {
