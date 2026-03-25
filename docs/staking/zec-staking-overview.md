@@ -1,8 +1,9 @@
 ---
-title: ZEC Staking Overview
-description: Three ways ZEC participates in Z — miner delegation, self-custodial staking, and liquid staking via stZEC. What each path earns and how to choose between them.
-keywords: [ZEC staking, self-custodial, stZEC, liquid staking, miner delegation, ZSP, yield, Z token rewards]
-ai_summary: ZEC has three participation paths in Z. (1) Miner delegation (Leg 1): embed validator + reward address in OP_RETURN of mined Zcash blocks. No changes to mining operations. Earn Z token rewards. (2) Self-custodial staking (Leg 2): create CLTV timelock on Zcash chain + OP_RETURN with validator and reward address. ZEC never leaves wallet. No bridge. Earn Z token rewards. Qualifies for Dual Staking boost. (3) stZEC liquid staking (post-launch, Leg 2 variant): bridge ZEC to Z → stake into stZEC contract → receive stZEC that appreciates with consensus rewards. DeFi composable. Does NOT qualify for Dual Staking boost.
+title: "ZEC Staking Overview"
+sidebarTitle: "ZEC Staking Overview"
+description: "Three ways ZEC participates in Z — miner delegation, self-custodial staking, and liquid staking via stZEC. What each path earns and how to choose between them."
+keywords: ['ZEC staking', 'self-custodial', 'stZEC', 'liquid staking', 'miner delegation', 'ZSP', 'yield', 'Z token rewards']
+ai_summary: "ZEC has three participation paths in Z. (1) Miner delegation (Leg 1): embed validator + reward address in OP_RETURN of mined Zcash blocks. No changes to mining operations. Earn Z token rewards. (2) Self-custodial staking (Leg 2): create CLTV timelock on Zcash chain + OP_RETURN with validator and reward address. ZEC never leaves wallet. No bridge. Earn Z token rewards. Qualifies for Dual Staking boost. (3) stZEC liquid staking (post-launch, Leg 2 variant): bridge ZEC to Z → stake into stZEC contract → receive stZEC that appreciates with consensus rewards. DeFi composable. Does NOT qualify for Dual Staking boost."
 ---
 
 # ZEC Staking Overview
@@ -27,7 +28,7 @@ ZEC miners include two pieces of data in an OP_RETURN output when they mine a Zc
 
 No new hardware. No new energy. No changes to existing mining operations. Mining pools delegate on behalf of all participants.
 
-For the full technical detail, see [Zcash Satoshi Plus — Leg 1](../core-concepts/zcash-satoshi-plus.md#leg-1-zec-miners-delegated-proof-of-work).
+For the full technical detail, see [Zcash Satoshi Plus — Leg 1](/docs/core-concepts/zcash-satoshi-plus#leg-1-zec-miners-delegated-proof-of-work).
 
 ---
 
@@ -42,7 +43,7 @@ ZEC holders timelock ZEC on the Zcash chain. The ZEC stays in the holder's walle
 - Only cost is temporary illiquidity during the timelock period
 - Qualifies for the Dual Staking yield boost when combined with Z token staking
 
-For the full walkthrough, see [Self-Custodial Staking](./self-custodial-staking.md).
+For the full walkthrough, see [Self-Custodial Staking](/docs/staking/self-custodial-staking).
 
 ---
 
@@ -57,7 +58,7 @@ Bridge ZEC to Z via the SPV bridge, deposit into the stZEC staking contract, and
 - Requires bridging (ZEC moves to the Z chain)
 - Does **not** qualify for the Dual Staking boost
 
-For the full detail, see [Liquid Staking](./liquid-staking.md).
+For the full detail, see [Liquid Staking](/docs/staking/liquid-staking).
 
 ---
 

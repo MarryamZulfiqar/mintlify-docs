@@ -1,8 +1,8 @@
 ---
-title: EVM Compatibility
-description: What works identically on Z vs. standard Ethereum, what's new on Z, and what's different. The complete reference for developers migrating from any EVM chain.
-keywords: [EVM compatibility, Solidity, ethers.js, Hardhat, Foundry, precompiles, Equihash, Blake2b, ZEC gas, Paymaster, ERC-4337, ERC-5564]
-ai_summary: Z is EVM-compatible. Identical to Ethereum: Solidity, ABI encoding, JSON-RPC, ethers.js/viem/wagmi, Hardhat/Foundry/Remix, all standard EIPs, all opcodes, gas model (EIP-1559), events, ECDSA/EIP-712, ERC-4337. New on Z (additive, don't affect existing contracts): Equihash precompile at 0x0B (Zcash PoW verification, flat-rate gas), Blake2b precompile at 0x0C (Zcash hashing, linear gas), ERC-4337 Paymaster for ZEC gas. Different on Z: native gas token is Z token (not ETH, not ZEC natively — ZEC accepted via Paymaster, conversion transparent to user), no opcode changes, no Solidity syntax changes. Deploying existing Ethereum contract to Z: update network config only.
+title: "EVM Compatibility"
+description: "What works identically on Z vs. standard Ethereum, what's new on Z, and what's different. The complete reference for developers migrating from any EVM chain."
+keywords: ['EVM compatibility', 'Solidity', 'ethers.js', 'Hardhat', 'Foundry', 'precompiles', 'Equihash', 'Blake2b', 'ZEC gas', 'Paymaster', 'ERC-4337', 'ERC-5564']
+ai_summary: "Z is EVM-compatible. Identical to Ethereum: Solidity, ABI encoding, JSON-RPC, ethers.js/viem/wagmi, Hardhat/Foundry/Remix, all standard EIPs, all opcodes, gas model (EIP-1559), events, ECDSA/EIP-712, ERC-4337. New on Z (additive, don't affect existing contracts): Equihash precompile at 0x0B (Zcash PoW verification, flat-rate gas), Blake2b precompile at 0x0C (Zcash hashing, linear gas), ERC-4337 Paymaster for ZEC gas. Different on Z: native gas token is Z token (not ETH, not ZEC natively — ZEC accepted via Paymaster, conversion transparent to user), no opcode changes, no Solidity syntax changes. Deploying existing Ethereum contract to Z: update network config only."
 ---
 
 # EVM Compatibility
@@ -84,11 +84,11 @@ This means:
 
 Migrating an existing Ethereum dApp to Z:
 
-- [ ] Update network config (RPC URL and chain ID — see [Quick Start](./quick-start.md))
+- [ ] Update network config (RPC URL and chain ID — see [Quick Start](/docs/for-developers/quick-start))
 - [ ] Verify your contracts deploy correctly (no changes needed for pure EVM contracts)
 - [ ] If your contracts handle gas payments: confirm ZEC Paymaster behavior is acceptable for your users
-- [ ] If you want to add ShieldedPool integration: see [MASP Integration Guide](./masp-integration-guide.md)
-- [ ] If you're building agent wallets: see [Permissions & Session Keys](../for-agents/permissions-session-keys.md)
+- [ ] If you want to add ShieldedPool integration: see [MASP Integration Guide](/docs/for-developers/masp-integration-guide)
+- [ ] If you're building agent wallets: see [Permissions & Session Keys](/docs/for-agents/permissions-session-keys)
 
 For most applications, the migration is a network config update only.
 

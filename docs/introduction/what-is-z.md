@@ -1,8 +1,8 @@
 ---
-title: What is Z
-description: Z is the privacy platform for human and agentic on-chain action. Powered by Zcash, Z delivers a vertically integrated stack of privacy-focused DeFi applications for human and agentic use.
-keywords: [Z Protocol, privacy platform, EVM, ZEC, Zcash, ShieldedPool, MASP, Zcosystem, ZSP, ZEC staking, USDZ, private DeFi, AI agents]
-
+title: "What is Z"
+sidebarTitle: "What is Z"
+description: "Z is the privacy platform for human and agentic on-chain action. Powered by Zcash, Z delivers a vertically integrated stack of privacy-focused DeFi applications for human and agentic use."
+keywords: ['Z Protocol', 'privacy platform', 'EVM', 'ZEC', 'Zcash', 'ShieldedPool', 'MASP', 'Zcosystem', 'ZSP', 'ZEC staking', 'USDZ', 'private DeFi', 'AI agents']
 ---
 
 # What is Z
@@ -81,7 +81,7 @@ Z lets users pay gas in ZEC or the Z token. ZEC holders can access all core appl
 
 Agents generate more transactions, more metadata, and more attack surface than any human user. Z provides the scaffolding that turns a capable model into a productive on-chain agent: EVM compatibility so existing tools carry over, protocol-level wallet hygiene so agents don't accumulate linkable transaction histories, vertically integrated DeFi so agents don't discover third-party protocols, agent-native tooling for reliable operation, and protocol-enforced permissions so agents can be constrained without being useless.
 
-For the full agent infrastructure, see [Z for AI Agents](../for-agents/z-for-ai-agents.md).
+For the full agent infrastructure, see [Z for AI Agents](/docs/for-agents/z-for-ai-agents).
 
 ---
 
@@ -89,10 +89,10 @@ For the full agent infrastructure, see [Z for AI Agents](../for-agents/z-for-ai-
 
 | Section | Covers |
 |---------|--------|
-| [Core Concepts](../core-concepts/privacy-architecture.md) | Privacy architecture, ZSP consensus, the Zcosystem, the Z token |
-| [Products](../products/shieldedpool.md) | ShieldedPool, Z Trade, Z Lend, Z Stake, USDZ, yUSDZ, Z Bridge |
-| [Staking](../staking/zec-staking-overview.md) | ZEC staking paths, self-custodial staking, liquid staking, Dual Staking |
-| [For Agents](../for-agents/z-for-ai-agents.md) | Agent infrastructure, wallet hygiene, permissions, tooling, simulation |
-| [Developers](../developers/quick-start.md) | Quick start, EVM compatibility, devnet, MASP integration, RelayAdapter |
-| [Compliance](../compliance/privacy-and-compliance.md) | How privacy and regulation coexist |
-| [Reference](../reference/roadmap.md) | Roadmap, security properties, glossary, FAQ |
+| [Core Concepts](/docs/core-concepts/privacy-architecture) | Privacy architecture, ZSP consensus, the Zcosystem, the Z token |
+| [Products](/docs/products/shieldedpool) | ShieldedPool, Z Trade, Z Lend, Z Stake, USDZ, yUSDZ, Z Bridge |
+| [Staking](/docs/staking/zec-staking-overview) | ZEC staking paths, self-custodial staking, liquid staking, Dual Staking |
+| [For Agents](/docs/for-agents/z-for-ai-agents) | Agent infrastructure, wallet hygiene, permissions, tooling, simulation |
+| [Developers](/docs/for-developers/quick-start) | Quick start, EVM compatibility, devnet, MASP integration, RelayAdapter |
+| [Compliance](/docs/compliance/privacy-and-compliance) | How privacy and regulation coexist |
+| [Reference](/docs/reference/roadmap) | Roadmap, security properties, glossary, FAQ |

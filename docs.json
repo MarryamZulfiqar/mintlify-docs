@@ -3,9 +3,9 @@
   "theme": "mint",
   "name": "Protocol Z Official Documentation",
   "colors": {
-    "primary": "#0D9373",
-    "light": "#55D799",
-    "dark": "#0D9373"
+    "primary": "#84A387",
+    "light": "#B7E1BA",
+    "dark": "#84A387"
   },
   "favicon": {
     "light": "/logo/light.svg",
@@ -24,10 +24,10 @@
       {
         "group": "Core Concepts",
         "pages": [
-          "docs/core-concepts/privacy-architecture",
           "docs/core-concepts/zcash-satoshi-plus",
+          "docs/core-concepts/the-z-token",
           "docs/core-concepts/the-zcosystem",
-          "docs/core-concepts/the-z-token"
+          "docs/core-concepts/privacy-architecture"
         ]
       },
       {
@@ -135,8 +135,4 @@
     "default": "dark"
   }
 }
-
-
-
-
 

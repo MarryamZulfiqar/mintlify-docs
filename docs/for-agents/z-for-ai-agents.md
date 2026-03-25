@@ -1,8 +1,9 @@
 ---
-title: Z for AI Agents
-description: Z provides the scaffolding that turns a capable AI model into a productive on-chain agent. EVM compatibility, protocol-level wallet hygiene, vertically integrated execution, agent-native tooling, simulation, and protocol-enforced permissions.
-keywords: [AI agents, scaffolding, on-chain agents, EVM, wallet hygiene, MASP, stealth addresses, MCP, SKILL.md, agent permissions, simulation, ERC-4337, Shells]
-ai_summary: Z provides five layers of scaffolding for on-chain AI agents: (1) EVM compatibility — Solidity, existing tooling, no new language; (2) Protocol-level wallet hygiene — agents enter MASP, exit to fresh stealth addresses per interaction via ECDH (ERC-5564), no observer can link activity to persistent identity; (3) Vertically integrated DeFi — one trusted stack, agents don't evaluate third-party protocols; (4) Agent-native tooling — MCP servers per ZApp, SKILL.md walkthroughs, LLM-native docs, framework integrations (GOAT, ElizaOS, OpenAI Agents SDK, Coinbase AgentKit, LangChain); (5) Protocol-level permissions — ERC-4337 Shells with spending caps, allowlists, session keys, consensus-enforced kill switches, hierarchical parent/child architecture.
+title: "Z for AI Agents"
+sidebarTitle: "Z for AI Agents"
+description: "Z provides the scaffolding that turns a capable AI model into a productive on-chain agent. EVM compatibility, protocol-level wallet hygiene, vertically integrated execution, agent-native tooling, simulation, and protocol-enforced permissions."
+keywords: ['AI agents', 'scaffolding', 'on-chain agents', 'EVM', 'wallet hygiene', 'MASP', 'stealth addresses', 'MCP', 'SKILL.md', 'agent permissions', 'simulation', 'ERC-4337', 'Shells']
+ai_summary: "Z provides five layers of scaffolding for on-chain AI agents: (1) EVM compatibility — Solidity, existing tooling, no new language; (2) Protocol-level wallet hygiene — agents enter MASP, exit to fresh stealth addresses per interaction via ECDH (ERC-5564), no observer can link activity to persistent identity; (3) Vertically integrated DeFi — one trusted stack, agents don't evaluate third-party protocols; (4) Agent-native tooling — MCP servers per ZApp, SKILL.md walkthroughs, LLM-native docs, framework integrations (GOAT, ElizaOS, OpenAI Agents SDK, Coinbase AgentKit, LangChain); (5) Protocol-level permissions — ERC-4337 Shells with spending caps, allowlists, session keys, consensus-enforced kill switches, hierarchical parent/child architecture."
 ---
 
 # Z for AI Agents
@@ -82,7 +83,7 @@ Agents managing real capital need to test strategies before deploying them. Z pr
 - **Backtesting.** Replay a strategy against historical mainnet state.
 - **Multi-agent simulation.** Full environment with competing agents and shared liquidity.
 
-For the full simulation reference, see [Simulation & Preflight](./simulation-preflight.md).
+For the full simulation reference, see [Simulation & Preflight](/docs/for-agents/simulation-preflight).
 
 ---
 
@@ -99,7 +100,7 @@ Z's agent wallets are ERC-4337 smart contract wallets (called Shells) with a bui
 
 Shells support nesting. A parent wallet deploys child wallets with inherited but strictly narrower permissions. Permissions cascade downward only — a child wallet can never exceed its parent's bounds. Revoking a parent cascades to all children. Hierarchy membership is committed as a Merkle root on-chain, proved by ZK proof without revealing the full tree structure.
 
-For the full permissions reference, see [Permissions & Session Keys](./permissions-session-keys.md).
+For the full permissions reference, see [Permissions & Session Keys](/docs/for-agents/permissions-session-keys).
 
 ---
 

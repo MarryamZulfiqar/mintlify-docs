@@ -1,8 +1,9 @@
 ---
-title: RelayAdapter Pattern
-description: The RelayAdapter is the canonical contract pattern for private DeFi on Z. Atomic: unshield from MASP → execute DeFi action → reshield output. One transaction. Unlinkable.
-keywords: [RelayAdapter, private DeFi, atomic, unshield, reshield, MASP, adaptParams, broadcaster, ZApp, private swap, private lending]
-ai_summary: RelayAdapter enables atomic private DeFi execution. Flow: user generates ZK proof with adaptParams binding = keccak256(nullifiers, commitments, actionData) in proof's public inputs → submits to broadcaster → broadcaster calls RelayAdapter → adapter atomically (1) calls MASP to spend input notes, (2) executes DeFi action (swap/lend/borrow), (3) shields output tokens back into MASP. Everything in one transaction. adaptParams binding prevents broadcaster from modifying swap parameters, recipients, or fees — if any bound parameter changes, proof is invalid, transaction reverts. Z ships RelayAdapters for Z Trade, Z Lend, USDZ. External teams can implement IRelayAdapter for their own ZApps.
+title: "RelayAdapter Pattern"
+sidebarTitle: "RelayAdapter Pattern"
+description: "The RelayAdapter is the canonical contract pattern for private DeFi on Z. Atomic: unshield from MASP → execute DeFi action → reshield output. One transaction. Unlinkable."
+keywords: ['RelayAdapter', 'private DeFi', 'atomic', 'unshield', 'reshield', 'MASP', 'adaptParams', 'broadcaster', 'ZApp', 'private swap', 'private lending']
+ai_summary: "RelayAdapter enables atomic private DeFi execution. Flow: user generates ZK proof with adaptParams binding = keccak256(nullifiers, commitments, actionData) in proof's public inputs → submits to broadcaster → broadcaster calls RelayAdapter → adapter atomically (1) calls MASP to spend input notes, (2) executes DeFi action (swap/lend/borrow), (3) shields output tokens back into MASP. Everything in one transaction. adaptParams binding prevents broadcaster from modifying swap parameters, recipients, or fees — if any bound parameter changes, proof is invalid, transaction reverts. Z ships RelayAdapters for Z Trade, Z Lend, USDZ. External teams can implement IRelayAdapter for their own ZApps."
 ---
 
 # RelayAdapter Pattern

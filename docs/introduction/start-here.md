@@ -1,6 +1,9 @@
 ---
 title: "Start Here"
-sidebarTitle: "Get Started"
+sidebarTitle: "Getting Started"
+description: "Find your path into Z Protocol documentation. Six audience tracks, each pointing to the right starting pages."
+keywords: ['start here', 'getting started', 'audience', 'ZEC holder', 'DeFi user', 'developer', 'AI agent', 'miner', 'validator']
+ai_summary: "Audience routing page for Z Protocol docs. Six tracks: (1) ZEC holder — ZEC staking overview, self-custodial staking, liquid staking; (2) DeFi user — Zcosystem, USDZ, Z Trade, Z Lend; (3) Developer/builder — Developer Quick Start, EVM compatibility; (4) AI agent builder — For Agents section, AI tooling setup; (5) Zcash miner — ZSP consensus Leg 1, ZEC staking overview; (6) Validator candidate — ZSP consensus validator election section."
 ---
 
 # Start Here
@@ -21,9 +24,9 @@ Z creates yield opportunities for ZEC holders that don't require giving up custo
 
 **Where to start:**
 
-1. [ZEC Staking Overview](../staking/zec-staking-overview.md) — all three paths and the tradeoffs between them
-2. [Self-Custodial Staking](../staking/self-custodial-staking.md) — how to timelock ZEC with no bridge
-3. [Liquid Staking](../staking/liquid-staking.md) — stZEC and the DeFi composition stack
+1. [ZEC Staking Overview](/docs/staking/zec-staking-overview) — all three paths and the tradeoffs between them
+2. [Self-Custodial Staking](/docs/staking/self-custodial-staking) — how to timelock ZEC with no bridge
+3. [Liquid Staking](/docs/staking/liquid-staking) — stZEC and the DeFi composition stack
 
 ---
 
@@ -40,10 +43,10 @@ Z provides a complete DeFi stack — trading, lending, borrowing, yield — wher
 
 **Where to start:**
 
-1. [The Zcosystem](../core-concepts/the-zcosystem.md) — what the application layer is and how it composes
-2. [USDZ](../products/usdz.md) — Z's private stablecoin
-3. [Z Trade](../products/z-trade.md) — how private trading works
-4. [Z Lend](../products/z-lend.md) — borrowing and lending with private positions
+1. [The Zcosystem](/docs/core-concepts/the-zcosystem) — what the application layer is and how it composes
+2. [USDZ](/docs/products/usdz) — Z's private stablecoin
+3. [Z Trade](/docs/products/z-trade) — how private trading works
+4. [Z Lend](/docs/products/z-lend) — borrowing and lending with private positions
 
 ---
 
@@ -60,9 +63,9 @@ Z is EVM-compatible. Solidity works. Existing tooling carries over. Your first Z
 
 **Where to start:**
 
-1. [Quick Start](../developers/quick-start.md) — network config, deploy a contract, first shielded transfer
-2. [EVM Compatibility](../developers/evm-compatibility.md) — what carries over, what's new, what's different
-3. [Local Devnet](../developers/local-devnet.md) — full ZSP \+ Zcash stack running locally via Docker
+1. [Quick Start](/docs/for-developers/quick-start) — network config, deploy a contract, first shielded transfer
+2. [EVM Compatibility](/docs/for-developers/evm-compatibility) — what carries over, what's new, what's different
+3. [Local Devnet](/docs/for-developers/local-devnet) — full ZSP \+ Zcash stack running locally via Docker
 
 ---
 
@@ -79,9 +82,9 @@ Z is designed as infrastructure for AI agents. Protocol-level wallet hygiene, ve
 
 **Where to start:**
 
-1. [Z for AI Agents](../for-agents/z-for-ai-agents.md) — the scaffolding model and what Z provides
-2. [AI Tooling Setup](../for-agents/ai-tooling-setup.md) — MCP installation and configuration
-3. [Permissions & Session Keys](../for-agents/permissions-session-keys.md) — how to constrain agents safely
+1. [Z for AI Agents](/docs/for-agents/z-for-ai-agents) — the scaffolding model and what Z provides
+2. [AI Tooling Setup](/docs/for-agents/agent-tooling) — MCP installation and configuration
+3. [Permissions & Session Keys](/docs/for-agents/permissions-session-keys) — how to constrain agents safely
 
 ---
 
@@ -97,8 +100,8 @@ Embed delegation metadata in the blocks you already mine. No new hardware, no ne
 
 **Where to start:**
 
-1. [ZEC Staking Overview](../staking/zec-staking-overview.md) — how miner delegation fits in the broader ZEC participation picture
-2. [Zcash Satoshi Plus — Leg 1](../core-concepts/zcash-satoshi-plus.md#leg-1-zec-miners-delegated-proof-of-work) — the technical detail of how miner delegation works
+1. [ZEC Staking Overview](/docs/staking/zec-staking-overview) — how miner delegation fits in the broader ZEC participation picture
+2. [Zcash Satoshi Plus — Leg 1](/docs/core-concepts/zcash-satoshi-plus#leg-1-zec-miners-delegated-proof-of-work) — the technical detail of how miner delegation works
 
 ---
 
@@ -114,8 +117,8 @@ Validators are elected through the ZSP hybrid scoring system combining ZEC miner
 
 **Where to start:**
 
-1. [Zcash Satoshi Plus](../core-concepts/zcash-satoshi-plus.md) — the full consensus mechanism
-2. [Validator Election](../core-concepts/zcash-satoshi-plus.md#validator-election) — how hybrid scoring works and how to register as a candidate
+1. [Zcash Satoshi Plus](/docs/core-concepts/zcash-satoshi-plus) — the full consensus mechanism
+2. [Validator Election](/docs/core-concepts/zcash-satoshi-plus#validator-election) — how hybrid scoring works and how to register as a candidate
 
 ---
 
@@ -125,6 +128,6 @@ Z's privacy is designed to coexist with regulatory requirements through viewing 
 
 **Where to start:**
 
-1. [Privacy & Compliance](../compliance/privacy-and-compliance.md) — the full compliance architecture
-2. [Selective Disclosure](../compliance/selective-disclosure.md) — how viewing keys work and how to scope them
-3. [Boundary Enforcement](../compliance/boundary-enforcement.md) — entry/exit screening via ASPs
+1. [Privacy & Compliance](/docs/compliance/privacy-and-compliance) — the full compliance architecture
+2. [Selective Disclosure](/docs/compliance/selective-disclosure) — how viewing keys work and how to scope them
+3. [Boundary Enforcement](/docs/compliance/boundary-enforcement) — entry/exit screening via ASPs

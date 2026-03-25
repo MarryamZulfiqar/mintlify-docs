@@ -1,8 +1,9 @@
 ---
-title: Developer Quick Start
-description: Connect to Z, deploy your first contract, and run a local devnet. Z is EVM-compatible — existing Solidity contracts deploy without modification.
-keywords: [quick start, developer, EVM, Solidity, deploy, devnet, Docker, ZSP, network config]
-ai_summary: Z is EVM-compatible. Existing Solidity deploys to Z without code changes, just network config update. Local development: Docker-based ZSP devnet with ./cli init, ./cli start, ./cli smoke. RPC endpoint defaults: HTTP localhost:8545, WebSocket localhost:8546. Production network details (chain ID, RPC URL, block explorer, testnet faucet) not yet finalized — requires engineering team input.
+title: "Developer Quick Start"
+sidebarTitle: "Developer Quick Start"
+description: "Connect to Z, deploy your first contract, and run a local devnet. Z is EVM-compatible — existing Solidity contracts deploy without modification."
+keywords: ['quick start', 'developer', 'EVM', 'Solidity', 'deploy', 'devnet', 'Docker', 'ZSP', 'network config']
+ai_summary: "Z is EVM-compatible. Existing Solidity deploys to Z without code changes, just network config update. Local development: Docker-based ZSP devnet with ./cli init, ./cli start, ./cli smoke. RPC endpoint defaults: HTTP localhost:8545, WebSocket localhost:8546. Production network details (chain ID, RPC URL, block explorer, testnet faucet) not yet finalized — requires engineering team input."
 ---
 
 # Developer Quick Start
@@ -83,7 +84,7 @@ The `smoke` command runs a basic health check confirming the stack is up and fun
 ./cli scenario <name>
 ```
 
-For the full devnet documentation, see [Local Devnet](./local-devnet.md).
+For the full devnet documentation, see [Local Devnet](/docs/for-developers/local-devnet).
 
 ---
 
@@ -139,7 +140,7 @@ Z is EVM-compatible but has two additions developers should know about:
 
 2. **Gas token:** The native gas token is the Z token. ZEC can be used as gas via an ERC-4337 Paymaster — users never handle the conversion directly.
 
-For the complete list of differences, see [EVM Compatibility](./evm-compatibility.md).
+For the complete list of differences, see [EVM Compatibility](/docs/for-developers/evm-compatibility).
 
 ---
 
@@ -147,9 +148,9 @@ For the complete list of differences, see [EVM Compatibility](./evm-compatibilit
 
 | Goal | Page |
 |------|------|
-| Understand what's different from Ethereum | [EVM Compatibility](./evm-compatibility.md) |
-| Run integration tests and scenarios | [Local Devnet](./local-devnet.md) |
-| Integrate with the ShieldedPool | [MASP Integration Guide](./masp-integration-guide.md) |
-| Build a private DeFi ZApp | [RelayAdapter Pattern](./relayAdapter-pattern.md) |
-| Route transactions through a broadcaster | [Broadcaster Network](./broadcaster-network.md) |
-| Write agent walkthroughs | [SKILL.md Reference](./skillmd-reference.md) |
+| Understand what's different from Ethereum | [EVM Compatibility](/docs/for-developers/evm-compatibility) |
+| Run integration tests and scenarios | [Local Devnet](/docs/for-developers/local-devnet) |
+| Integrate with the ShieldedPool | [MASP Integration Guide](/docs/for-developers/masp-integration-guide) |
+| Build a private DeFi ZApp | [RelayAdapter Pattern](/docs/for-developers/relayAdapter-pattern) |
+| Route transactions through a broadcaster | [Broadcaster Network](/docs/for-developers/broadcaster-network) |
+| Write agent walkthroughs | [SKILL.md Reference](/docs/for-developers/skillmd-reference) |
