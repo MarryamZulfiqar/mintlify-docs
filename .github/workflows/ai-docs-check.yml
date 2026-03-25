@@ -71,8 +71,8 @@ jobs:
 
   # ── 2. Mintlify Build Check ───────────────────────────────────────────────
 
-  mintlify-build:
-    name: Mintlify Build & Link Check
+  mintlify-validate:
+    name: Mintlify Validate & Link Check
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -86,7 +86,7 @@ jobs:
         run: npm install -g mintlify
 
       - name: Build & validate docs
-        run: mintlify build
+        run: mintlify validate
         # mintlify build will fail on:
         #   - Broken internal links
         #   - Pages in docs.json that don't exist
@@ -342,7 +342,7 @@ jobs:
     runs-on: ubuntu-latest
     needs:
       - frontmatter-check
-      - mintlify-build
+      - mintlify-validate
       - navigation-check
       - llms-txt-check
       - markdown-lint
@@ -357,7 +357,7 @@ jobs:
           script: |
             const jobs = {
               'Frontmatter Check':     '${{ needs.frontmatter-check.result }}',
-              'Mintlify Build':        '${{ needs.mintlify-build.result }}',
+              'Mintlify Validate':        '${{ needs.mintlify-validate.result }}',
               'Navigation (docs.json)':'${{ needs.navigation-check.result }}',
               'LLMs.txt Check':        '${{ needs.llms-txt-check.result }}',
               'LLMs-full Check':       '${{ needs.llms-full-check.result }}',
