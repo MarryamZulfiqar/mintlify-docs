@@ -1,5 +1,9 @@
-# Glossary
-
+---
+title: "Glossary"
+sidebarTitle: "Glossary"
+ai_summary: "Authoritative definitions for all Z Protocol terminology organized by category: protocol, privacy, consensus, assets and tokens, technical, agent infrastructure, and bridge terms."
+keywords: ["glossary", "definitions", "MASP", "ShieldedPool", "ZSP", "Z token", "ZEC", "staking", "Groth16", "MCP", "Shell", "RelayAdapter", "nullifier", "commitment"]
+---
 Authoritative definitions for all Z Protocol terms. When terminology is in doubt, this page is the source of truth.
 
 ---
