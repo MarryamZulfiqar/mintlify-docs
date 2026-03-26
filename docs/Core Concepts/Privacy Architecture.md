@@ -1,4 +1,9 @@
-# Privacy Architecture
+---
+title: "Privacy Architecture"
+sidebarTitle: "Privacy Architecture"
+ai_summary: "Technical deep-dive into Z's layered privacy mechanisms: ShieldedPool note commitments, Merkle trees, nullifiers, Groth16 zero-knowledge proofs on BN254, stealth addresses, gas abstraction via broadcasters, and the master key hierarchy."
+keywords: ["privacy", "ShieldedPool", "MASP", "zero-knowledge proofs", "Groth16", "BN254", "Poseidon", "nullifier", "stealth address", "viewing key", "gas abstraction"]
+---
 
 Z severs the connection between on-chain activity and identity. Assets sit in the [[ShieldedPool (MASP)]] as private notes. When a user or agent needs to interact with an app, funds exit to a fresh stealth address with no connection to previous activity. The interaction executes from that address, and proceeds re-shield back into the pool.
 
