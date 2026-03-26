@@ -1,4 +1,9 @@
-# USDZ
+---
+title: "USDZ"
+sidebarTitle: "USDZ"
+ai_summary: "Z's 1:1 USD-backed private stablecoin — how shielded and direct minting works via LayerZero from Ethereum/Arbitrum/Base, redemption flow, peg stability via reserve backing, and use cases across the Zcosystem."
+keywords: ["USDZ", "stablecoin", "ShieldedPool", "shielded minting", "LayerZero", "privacy", "DeFi", "USD-backed", "yUSDZ", "Z Lend", "Z Trade"]
+---
 
 USDZ is Z's private stablecoin. Pegged 1:1 to the US dollar, fully backed by stablecoin reserves, and mints directly into the [[ShieldedPool (MASP)|ShieldedPool]] as private notes.
 
