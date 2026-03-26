@@ -1,4 +1,9 @@
-# Z Stake
+---
+title: "Z Stake"
+sidebarTitle: "Z Stake"
+ai_summary: "Z Stake issues liquid staking tokens stZEC (for ZEC) and stZ (for Z tokens) using a non-rebasing share price model, keeping staked assets composable for use as DeFi collateral, trading on Z Trade, and shielding in the ShieldedPool while earning staking rewards."
+keywords: ["Z Stake", "stZEC", "stZ", "liquid staking", "ZEC", "Z token", "composable", "DeFi", "staking rewards", "ShieldedPool", "non-rebasing"]
+---
 
 Z Stake issues liquid staking tokens for ZEC and Z tokens. Staked assets remain fully composable. Use them as collateral, trade them, or shield them, all while earning staking rewards.
 
