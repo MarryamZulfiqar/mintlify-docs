@@ -1,4 +1,9 @@
-# What is Z
+---
+title: "What is Z"
+sidebarTitle: "What is Z"
+ai_summary: "Introduction to Z as a programmable privacy platform for autonomous applications and anonymous activity, powered by Zcash with a dual architecture of the ShieldedPool (MASP) and the Zcosystem EVM application layer."
+keywords: ["Z Protocol", "privacy", "AI agents", "Zcash", "ShieldedPool", "Zcosystem", "EVM", "ZEC", "DeFi", "zero-knowledge proofs"]
+---
 
 Z is the programmable privacy platform for **autonomous applications** and **anonymous activity**.
 
