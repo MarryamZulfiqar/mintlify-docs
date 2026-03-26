@@ -1,4 +1,9 @@
-# Z Trade
+---
+title: "Z Trade"
+sidebarTitle: "Z Trade"
+ai_summary: "Z's enshrined private DEX — atomic unshield-swap-reshield flows via the RelayAdapter pattern using Groth16 ZK proofs and broadcaster gas abstraction, making trades unlinkable to identity, with adaptParams binding preventing broadcaster manipulation."
+keywords: ["Z Trade", "DEX", "private trading", "RelayAdapter", "ShieldedPool", "ZK proof", "Groth16", "broadcaster", "swap", "adaptParams", "concentrated liquidity"]
+---
 
 Z Trade is Z's enshrined DEX. Swap assets privately using the [[ShieldedPool (MASP)|ShieldedPool]] and the RelayAdapter pattern. A private swap is one transaction: unshield, execute, reshield.
 
