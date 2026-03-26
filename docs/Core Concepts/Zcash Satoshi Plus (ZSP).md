@@ -1,4 +1,9 @@
-# Zcash Satoshi Plus (ZSP)
+---
+title: "Zcash Satoshi Plus (ZSP)"
+sidebarTitle: "Zcash Satoshi Plus"
+ai_summary: "Technical overview of Z's hybrid consensus mechanism combining three legs — ZEC mining delegation (DPoW), self-custodial ZEC staking (CLTV timelocks), and Z token staking (DPoS) — into a hybrid validator election system with 24-hour rounds and on-chain Zcash verification."
+keywords: ["ZSP", "Zcash Satoshi Plus", "consensus", "validators", "ZEC staking", "DPoW", "DPoS", "CLTV", "Equihash", "Blake2b", "relayer", "hybrid consensus"]
+---
 
 Z is secured by a set of high-performance validators, elected by three groups:
 
