@@ -1,4 +1,9 @@
-# Dual Staking
+---
+title: "Dual Staking"
+sidebarTitle: "Dual Staking"
+ai_summary: "How staking both ZEC (via CLTV timelock on Zcash) and Z tokens simultaneously earns a boosted yield multiplier through ZSP consensus, and the flywheel mechanism this creates between ZEC demand and Z token demand."
+keywords: ["dual staking", "ZEC", "Z token", "boosted rewards", "yield multiplier", "ZSP", "staking", "consensus", "flywheel"]
+---
 
 Dual Staking multiplies staking yields for participants who contribute to both the ZEC and Z token legs of [[Zcash Satoshi Plus (ZSP)|ZSP]] consensus. Staking ZEC alone earns base rewards. Staking Z tokens alongside ZEC earns boosted rewards.
 
