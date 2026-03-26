@@ -1,4 +1,9 @@
-# The Zcosystem
+---
+title: "The Zcosystem"
+sidebarTitle: "Zcosystem"
+ai_summary: "Overview of Z's vertically integrated DeFi application layer — Z Trade (private DEX), Z Lend (lending/borrowing), Z Stake (liquid staking), USDZ (private stablecoin), yUSDZ (yield-bearing stablecoin) — and why vertical integration serves AI agents and privacy."
+keywords: ["Zcosystem", "DeFi", "Z Trade", "Z Lend", "Z Stake", "USDZ", "yUSDZ", "ShieldedPool", "RelayAdapter", "AI agents", "vertical integration"]
+---
 
 The Zcosystem is Z's application layer: a coordinated set of DeFi primitives, each integrated with the [[ShieldedPool (MASP)]] at the protocol level.
 
