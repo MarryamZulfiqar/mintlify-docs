@@ -1,4 +1,9 @@
-# Start Here
+---
+title: "Start Here"
+sidebarTitle: "Start Here"
+ai_summary: "Overview of Z Protocol documentation organized by user role — ZEC holders, DeFi users, developers, AI agents, Zcash miners, validators, and compliance teams — with links to relevant starting points."
+keywords: ["Z Protocol", "getting started", "ZEC", "DeFi", "AI agents", "validators", "miners", "compliance", "staking", "overview"]
+---
 
 Welcome to the Z Protocol documentation. Use the track that matches your role.
 
