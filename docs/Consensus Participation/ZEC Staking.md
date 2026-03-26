@@ -1,4 +1,9 @@
-# ZEC Staking
+---
+title: "ZEC Staking"
+sidebarTitle: "ZEC Staking"
+ai_summary: "Step-by-step guide to self-custodial ZEC staking on the Zcash chain using CLTV timelocks and OP_RETURN delegation metadata to earn Z token rewards, with no bridge, wrapping, or custody transfer required."
+keywords: ["ZEC staking", "CLTV", "timelock", "OP_RETURN", "self-custodial", "Z token rewards", "Zcash", "delegation", "validator", "staking weight"]
+---
 
 Z offers self-custodial staking for ZEC holders. ZEC holders earn Z token rewards by timelocking ZEC on the Zcash chain. The ZEC never leaves your wallet. No bridge. No wrapping. No custody transfer.
 
