@@ -1,4 +1,9 @@
-# Z Bridge
+---
+title: "Z Bridge"
+sidebarTitle: "Z Bridge"
+ai_summary: "Overview of Z's bridging infrastructure — the ZEC Bridge for native ZEC and the LayerZero Bridge for ERC-20 tokens — including shielded deposit flows that mint assets directly into the ShieldedPool with no public recipient address."
+keywords: ["Z Bridge", "ZEC", "LayerZero", "bridging", "cross-chain", "ShieldedPool", "shielded deposits", "ERC-20", "USDZ", "shielded minting"]
+---
 
 Assets enter Z through bridging infrastructure. The ZEC Bridge handles ZEC. The LayerZero Bridge handles stablecoins and other ERC-20 tokens. Both support deposits directly into the [[ShieldedPool (MASP)|ShieldedPool]].
 
