@@ -1,4 +1,9 @@
-# ShieldedPool (MASP)
+---
+title: "ShieldedPool (MASP)"
+sidebarTitle: "ShieldedPool"
+ai_summary: "User-facing overview of Z's Multi-Asset Shielded Pool — how to enter via shielded or direct minting, what happens inside (private balances, transfers, DeFi via stealth addresses), how to check balances and exit, and viewing key capabilities."
+keywords: ["ShieldedPool", "MASP", "privacy", "shielded notes", "viewing key", "ZEC", "USDZ", "stealth address", "multi-asset", "shielded minting"]
+---
 
 The ShieldedPool, also called the MASP (Multi-Asset Shielded Pool), is Z's home base. Assets deposited into the ShieldedPool become private notes. No outside observer can see who holds what, how much, or that a specific user is present at all.
 
