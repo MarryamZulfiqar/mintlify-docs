@@ -1,4 +1,9 @@
-# yUSDZ
+---
+title: "yUSDZ"
+sidebarTitle: "yUSDZ"
+ai_summary: "yUSDZ is a non-rebasing ERC-4626 yield-bearing vault for USDZ — using a share price appreciation model for ShieldedPool compatibility, enabling the first yield-bearing private dollar where users earn yield while fully shielded."
+keywords: ["yUSDZ", "USDZ", "yield", "ERC-4626", "ShieldedPool", "non-rebasing", "stablecoin", "private yield", "share price", "DeFi composition"]
+---
 
 yUSDZ is the yield-bearing version of [[USDZ]]. Deposit USDZ and earn yield automatically. Your yUSDZ balance stays constant. The value per token grows.
 
