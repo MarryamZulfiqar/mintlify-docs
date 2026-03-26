@@ -1,4 +1,9 @@
-# Z Staking
+---
+title: "Z Staking"
+sidebarTitle: "Z Staking"
+ai_summary: "How Z token holders stake by delegating to validators through the ZSPStake contract to earn the largest share of consensus emissions, qualify for Dual Staking yield boosts, and use stZ liquid staking for full DeFi composability while contributing to governance."
+keywords: ["Z staking", "Z token", "ZSPStake", "validators", "consensus rewards", "dual staking", "stZ", "liquid staking", "governance", "DPoS"]
+---
 
 Z token holders stake directly on Z by delegating tokens to validators through the ZSPStake contract. Z stakers earn the largest share of consensus emissions.
 
