@@ -1,4 +1,9 @@
-# Zcash Delegated Proof of Work
+---
+title: "Zcash Delegated Proof of Work"
+sidebarTitle: "Zcash Delegated Proof of Work"
+ai_summary: "How Zcash miners participate in ZSP consensus by embedding OP_RETURN delegation metadata in blocks they already mine to earn Z token rewards, with no additional hardware, energy, or changes to Zcash — plus the on-chain verification infrastructure."
+keywords: ["delegated proof of work", "DPoW", "Zcash miners", "OP_RETURN", "ZSP", "Z token rewards", "Equihash", "Blake2b", "Zcash Light Client", "relayer", "mining pool"]
+---
 
 Zcash miners participate in [[Zcash Satoshi Plus (ZSP)|ZSP]] consensus by delegating their existing hashrate to Z validators. The miner embeds delegation metadata in the Zcash blocks they already mine. No new hardware, no additional energy, no changes to existing mining operations. In return, miners earn Z token rewards on top of their existing ZEC mining income.
 
