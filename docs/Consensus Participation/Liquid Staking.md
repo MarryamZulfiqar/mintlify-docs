@@ -1,4 +1,9 @@
-# Liquid Staking (stZEC / stZ)
+---
+title: "Liquid Staking (stZEC / stZ)"
+sidebarTitle: "Liquid Staking"
+ai_summary: "How stZEC and stZ liquid staking receipt tokens work using a non-rebasing share price model for ShieldedPool compatibility, enabling composable use as DeFi collateral, trading, and private shielding while earning staking rewards."
+keywords: ["liquid staking", "stZEC", "stZ", "ZEC", "Z token", "DeFi", "ShieldedPool", "composability", "non-rebasing", "staking receipt token", "Z Lend", "Z Trade"]
+---
 
 Liquid staking turns staked assets into composable tokens that can move through the [[The Zcosystem|Zcosystem]]. Instead of locking ZEC or Z tokens and losing access, liquid staking issues a receipt token (stZEC or stZ) that appreciates in value as staking rewards accrue. The receipt token is freely transferable, usable as collateral, and compatible with the [[ShieldedPool (MASP)|ShieldedPool]].
 
