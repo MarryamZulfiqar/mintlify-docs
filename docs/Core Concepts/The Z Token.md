@@ -1,4 +1,9 @@
-# The Z Token
+---
+title: "The Z Token"
+sidebarTitle: "Z Token"
+ai_summary: "Overview of the Z token's four utility roles: gas payments (via ERC-4337 Paymaster for ZEC holders), staking and consensus participation in ZSP, protocol governance, and value accrual from Zcosystem application revenue."
+keywords: ["Z token", "gas", "staking", "governance", "ZSP", "consensus", "dual staking", "value accrual", "Zcosystem", "Paymaster"]
+---
 
 The Z token is the gas, governance, and value-capture token for Z Protocol.
 
