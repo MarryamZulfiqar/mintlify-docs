@@ -1,4 +1,9 @@
-# FAQ
+---
+title: "FAQ"
+sidebarTitle: "FAQ"
+ai_summary: "Frequently asked questions about Z Protocol covering general architecture, privacy model, ZEC and staking options, USDZ stablecoin, Z token utility, technical EVM compatibility, and Zcosystem application design."
+keywords: ["FAQ", "Z Protocol", "ZEC", "USDZ", "Z token", "privacy", "staking", "EVM", "ZSP", "Zcosystem", "AI agents"]
+---
 
 Common questions about Z Protocol, organized by topic.
 
