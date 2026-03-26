@@ -1,4 +1,9 @@
-# Privacy & Compliance
+---
+title: "Privacy & Compliance"
+sidebarTitle: "Privacy & Compliance"
+ai_summary: "Z's compliance framework — ASP-enforced entry and exit screening against OFAC sanctions lists, Privacy Pools ZK membership proofs for withdrawal compliance, selective disclosure via user-controlled viewing keys, exchange integration guidance, and emergency controls."
+keywords: ["compliance", "OFAC", "ASP", "privacy pools", "viewing keys", "selective disclosure", "sanctions screening", "regulatory", "ShieldedPool", "Travel Rule", "audit"]
+---
 
 Z is a privacy protocol. The ShieldedPool severs the connection between on-chain activity and identity, and the protocol is permissionless.
 
