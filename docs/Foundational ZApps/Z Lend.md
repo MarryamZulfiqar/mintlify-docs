@@ -1,4 +1,9 @@
-# Z Lend
+---
+title: "Z Lend"
+sidebarTitle: "Z Lend"
+ai_summary: "Z's privacy-preserving enshrined lending and borrowing protocol — atomic unshield-deposit-reshield via the RelayAdapter pattern, Aave-style health factor and liquidation mechanics, and a reserve factor revenue model."
+keywords: ["Z Lend", "lending", "borrowing", "collateral", "ShieldedPool", "RelayAdapter", "health factor", "liquidation", "USDZ", "stZEC", "Aave"]
+---
 
 Z Lend is Z's enshrined lending and borrowing protocol. Deposit collateral and borrow against it while maintaining anonymity.
 
